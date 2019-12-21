@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 public class PlayerListener implements Listener {
@@ -30,5 +31,10 @@ public class PlayerListener implements Listener {
             message = message.replace("%PLAYER%", p.getName());
             event.setQuitMessage(message);
         }
+    }
+
+    @EventHandler
+    public void onPlayerPickItem(PlayerPickupItemEvent event){
+        event.setCancelled(true);
     }
 }
