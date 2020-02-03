@@ -1,5 +1,7 @@
 package de.snx.survivalgames.listener;
 
+import de.snx.statsapi.manager.StatsManager;
+import de.snx.statsapi.manager.other.PlayerStats;
 import de.snx.survivalgames.GameType;
 import de.snx.survivalgames.SurvivalGames;
 import org.bukkit.Bukkit;
@@ -12,6 +14,25 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 public class PlayerListener implements Listener {
 
+    public StatsManager statsManager;
+
+    @EventHandler
+    public void onJoin(PlayerJoinEvent event){
+        statsManager.addPlayerToCache(event.getPlayer().getUniqueId());
+    }
+
+    @EventHandler
+    public void onQuit(PlayerQuitEvent event){
+        statsManager.removePlayerFromCache(event.getPlayer().getUniqueId());
+
+        PlayerStats stats = statsManager.getPlayerStats(event.getPlayer().getUniqueId());
+        int kills = stats.getKills();
+        int deaths = stats.getDeaths();
+        int games = stats.getGames();
+        int wins = stats.getWins();
+        double kd = stats.getKD();
+    }
+
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event){
         Player p = event.getPlayer();
@@ -21,6 +42,9 @@ public class PlayerListener implements Listener {
             message = message.replace("%PLAYER%", p.getName());
             event.setJoinMessage(message);
         }
+
+
+        SurvivalGames.getStatsManager().addPlayerToCache(p.getUniqueId());
     }
 
     @EventHandler
@@ -31,6 +55,13 @@ public class PlayerListener implements Listener {
             message = message.replace("%PLAYER%", p.getName());
             event.setQuitMessage(message);
         }
+
+        SurvivalGames.getStatsManager().addPlayerToCache(p.getUniqueId());
+        PlayerStats stats = SurvivalGames.getStatsManager().getPlayerStats(p.getUniqueId());
+        int kills = stats.getKills();
+
+
+
     }
 
     @EventHandler

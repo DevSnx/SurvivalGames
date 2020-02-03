@@ -1,5 +1,7 @@
 package de.snx.survivalgames;
 
+import de.snx.statsapi.StatsAPI;
+import de.snx.statsapi.manager.StatsManager;
 import de.snx.survivalgames.configs.FileManager;
 import de.snx.survivalgames.listener.*;
 import de.snx.survivalgames.manager.GameManager;
@@ -12,6 +14,7 @@ public class SurvivalGames extends JavaPlugin {
     public static SurvivalGames instance;
     public static FileManager fileManager;
     public static GameManager gameManager;
+    public static StatsManager statsManager;
 
     @Override
     public void onDisable() {
@@ -51,5 +54,9 @@ public class SurvivalGames extends JavaPlugin {
 
     public static GameManager getGameManager() {
         return gameManager;
+    }
+
+    public static StatsManager getStatsManager() {
+        return statsManager;
     }
 }

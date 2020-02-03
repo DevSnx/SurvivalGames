@@ -36,5 +36,11 @@
             <version>1.14.4</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.spigot</groupId>
+            <artifactId>statsapi</artifactId>
+            <version>1.0.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 </project>
