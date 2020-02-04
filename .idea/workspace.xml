@@ -18,7 +18,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SimpleStats" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -48,10 +48,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="811" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580758431229" />
-    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1580770129240">
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1580821149374">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580770129240" />
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580821149374" />
     <state width="1877" height="194" key="GridCell.Tab.0.bottom" timestamp="1580770263133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
