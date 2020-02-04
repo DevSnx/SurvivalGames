@@ -1,9 +1,12 @@
 package de.snx.survivalgames;
 
-import de.snx.statsapi.StatsAPI;
 import de.snx.statsapi.manager.StatsManager;
 import de.snx.survivalgames.configs.FileManager;
 import de.snx.survivalgames.listener.*;
+import de.snx.survivalgames.listener.player.PlayerInteract;
+import de.snx.survivalgames.listener.player.PlayerJoin;
+import de.snx.survivalgames.listener.player.PlayerPickupItem;
+import de.snx.survivalgames.listener.player.PlayerQuit;
 import de.snx.survivalgames.manager.GameManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
@@ -23,25 +26,21 @@ public class SurvivalGames extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Bukkit.getConsoleSender().sendMessage("§7--] §aSurvivalGames §7[--");
-        Bukkit.getConsoleSender().sendMessage("          §c13%");
         instance = this;
-        Bukkit.getConsoleSender().sendMessage("          §c33%");
         this.fileManager = new FileManager();
         this.gameManager = new GameManager();
-        Bukkit.getConsoleSender().sendMessage("          §c53%");
         loadAll();
-        Bukkit.getConsoleSender().sendMessage("         §c100%");
-        Bukkit.getConsoleSender().sendMessage("§7--] §aSurvivalGames §7[--");
     }
 
     public void loadAll(){
         PluginManager load = Bukkit.getPluginManager();
-        load.registerEvents(new CommandListener(), this);
-        load.registerEvents(new EntityListener(), this);
-        load.registerEvents(new InteractListener(), this);
-        load.registerEvents(new PlayerListener(), this);
-        load.registerEvents(new ServerListener(), this);
+        load.registerEvents(new PlayerInteract(), this);
+        load.registerEvents(new PlayerJoin(), this);
+        load.registerEvents(new PlayerQuit(), this);
+        load.registerEvents(new PlayerPickupItem(), this);
+        load.registerEvents(new PlayerJoin(), this);
+        load.registerEvents(new PlayerInteract(), this);
+        load.registerEvents(new ServerListPing(), this);
     }
 
     public static SurvivalGames getInstance() {
