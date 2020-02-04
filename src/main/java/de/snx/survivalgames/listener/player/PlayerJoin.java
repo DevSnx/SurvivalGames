@@ -18,6 +18,6 @@ public class PlayerJoin implements Listener {
             message = message.replace("%PLAYER%", p.getName());
             event.setJoinMessage(message);
         }
-        SurvivalGames.getStatsManager().addPlayerToCache(p.getUniqueId());
+        SurvivalGames.getStatsManager().addPlayerToCache(p.getUniqueId(), p.getName());
     }
 }

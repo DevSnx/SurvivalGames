@@ -1,7 +1,7 @@
 package de.snx.survivalgames;
 
-import de.snx.statsapi.manager.FileManager;
 import de.snx.statsapi.manager.StatsManager;
+import de.snx.survivalgames.manager.FileManager;
 import de.snx.survivalgames.listener.*;
 import de.snx.survivalgames.listener.player.PlayerInteract;
 import de.snx.survivalgames.listener.player.PlayerJoin;
