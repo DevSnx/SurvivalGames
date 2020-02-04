@@ -1,7 +1,7 @@
 package de.snx.survivalgames;
 
+import de.snx.statsapi.manager.FileManager;
 import de.snx.statsapi.manager.StatsManager;
-import de.snx.survivalgames.configs.FileManager;
 import de.snx.survivalgames.listener.*;
 import de.snx.survivalgames.listener.player.PlayerInteract;
 import de.snx.survivalgames.listener.player.PlayerJoin;
@@ -16,8 +16,8 @@ public class SurvivalGames extends JavaPlugin {
 
     public static SurvivalGames instance;
     public static FileManager fileManager;
-    public static GameManager gameManager;
     public static StatsManager statsManager;
+    public static GameManager gameManager;
 
     @Override
     public void onDisable() {

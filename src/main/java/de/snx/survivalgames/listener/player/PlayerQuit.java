@@ -1,7 +1,7 @@
 package de.snx.survivalgames.listener.player;
 
 import de.snx.statsapi.manager.other.PlayerStats;
-import de.snx.survivalgames.GameType;
+import de.snx.survivalgames.manager.other.GameType;
 import de.snx.survivalgames.SurvivalGames;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

@@ -1,6 +1,6 @@
 package de.snx.survivalgames.manager;
 
-import de.snx.survivalgames.GameType;
+import de.snx.survivalgames.manager.other.GameType;
 
 public class GameManager {
 
