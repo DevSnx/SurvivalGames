@@ -29,18 +29,6 @@ public class SurvivalGames extends JavaPlugin {
         instance = this;
         this.fileManager = new FileManager();
         this.gameManager = new GameManager();
-        loadAll();
-    }
-
-    public void loadAll(){
-        PluginManager load = Bukkit.getPluginManager();
-        load.registerEvents(new PlayerInteract(), this);
-        load.registerEvents(new PlayerJoin(), this);
-        load.registerEvents(new PlayerQuit(), this);
-        load.registerEvents(new PlayerPickupItem(), this);
-        load.registerEvents(new PlayerJoin(), this);
-        load.registerEvents(new PlayerInteract(), this);
-        load.registerEvents(new ServerListPing(), this);
     }
 
     public static SurvivalGames getInstance() {
