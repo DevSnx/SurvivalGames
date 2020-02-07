@@ -1,22 +1,16 @@
 package de.snx.survivalgames;
 
+import de.snx.statsapi.StatsAPI;
 import de.snx.statsapi.manager.StatsManager;
 import de.snx.survivalgames.manager.FileManager;
-import de.snx.survivalgames.listener.*;
-import de.snx.survivalgames.listener.player.PlayerInteract;
-import de.snx.survivalgames.listener.player.PlayerJoin;
-import de.snx.survivalgames.listener.player.PlayerPickupItem;
-import de.snx.survivalgames.listener.player.PlayerQuit;
 import de.snx.survivalgames.manager.GameManager;
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SurvivalGames extends JavaPlugin {
 
     public static SurvivalGames instance;
     public static FileManager fileManager;
-    public static StatsManager statsManager;
+    public static StatsAPI statsAPI;
     public static GameManager gameManager;
 
     @Override
@@ -43,7 +37,7 @@ public class SurvivalGames extends JavaPlugin {
         return gameManager;
     }
 
-    public static StatsManager getStatsManager() {
-        return statsManager;
+    public static StatsAPI getStatsAPI() {
+        return statsAPI;
     }
 }
