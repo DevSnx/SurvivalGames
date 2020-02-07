@@ -1,18 +1,18 @@
 # SurvivalGames
-![Todo](https://turadox.eu/wp-content/uploads/2020/02/Todo-new.png)
+![sg_Todo](https://turadox.eu/wp-content/uploads/2020/02/sg_Todo.png)
  - Any Ideas?
 
-![Todo](https://turadox.eu/wp-content/uploads/2020/02/Features.png)
+![sg_Features](https://turadox.eu/wp-content/uploads/2020/02/sg_Features.png)
  - UUID Support
  - Full Configurable
  - Support Muli Languages!
 
 
-![Todo](https://turadox.eu/wp-content/uploads/2020/02/Commands-new.png)
+![sg_Commands](https://turadox.eu/wp-content/uploads/2020/02/sg_Commands.png)
  - /start
  - /sg
  - /sg help
  - /sg start
  - /sg setspawn <spawn>
 
-![Todo](https://turadox.eu/wp-content/uploads/2020/02/Files-new.png)
+![sg_Files](https://turadox.eu/wp-content/uploads/2020/02/sg_Files.png)
