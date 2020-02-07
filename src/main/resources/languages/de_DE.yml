@@ -1,0 +1,22 @@
+SURVIVALGAMES:
+  MESSAGE:
+    NOPERMISSION: '%PREFIX% &4Keine Berechtigung!'
+    NOMINECRAFTACCOUNT: '%PREFIX% &cEs existiert kein Minecraftaccount mit diesem Namen!'
+    NOTENOUGTPLAYERS: '%PREFIX% &cWarte auf weitere Spieler...'
+    LOBBY:
+      JOIN: '%PREFIX% &e%PLAYER% &7hat das Spiel betreten.'
+      QUIT: '%PREFIX% &e%PLAYER% &7hat das Spiel verlassen.'
+    INGAME:
+      JOIN: '%PREFIX% &4Spiel läuft bereits!'
+      QUIT: '%PREFIX% &e%PLAYER% &7hat das Spiel verlassen.'
+    COUNTDOWN:
+      LOBBY: '%PREFIX% &7Das Spiel startet in &e%SECONDS% &7Sekunden.'
+      SPAWN: '%PREFIX% &7Das Spiel beginnt in &e%SECONDS% &7Sekunden.'
+      PRETIME: '%PREFIX% &7Die Schutzzeit endet in &e%SECONDS% &7Sekunden.'
+      DEATHMATCH: '%PREFIX% &7Das Deathmatch startet in &e%SECONDS% &7Sekunden.'
+      RESTART: '%PREFIX% &7Der Server startet in &e%SECONDS% &7Sekunden neu.'
+    DEATH:
+      KILLERMESSAGE: '%PREFIX% &7Du hast &e%PLAYER% &7getötet.'
+      PLAYERMESSAGE: '%PREFIX% &7Der Spieler &e%KILLER%&7 hat dich getötet.'
+      DEATHPLAYERMESSAGE: '%PREFIX% &e%KILLER% &7hat &e%PLAYER% &7getötet.'
+      DEATHMESSAGE: '%PREFIX% &e%PLAYER% &7ist gestorben.'
