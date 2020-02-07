@@ -7,15 +7,15 @@ import org.bukkit.configuration.file.FileConfiguration;
 public class MessagesFile extends FileBase {
 
     public MessagesFile() {
-        super("", "message");
+        super("", "messages");
         writeDefaults();
     }
 
     private void writeDefaults() {
         FileConfiguration cfg = getConfig();
-        cfg.addDefault("SURIVALGAMES.MESSAGE.NOPERMISSION", "%PREFIX% &4Keine Berechtigung!");
-        cfg.addDefault("SURIVALGAMES.MESSAGE.NOMINECRAFTACCOUNT", "%PREFIX% &cEs existiert kein Minecraftaccount mit diesem Namen!");
-        cfg.addDefault("SURVIVALGAMES.MESSAGE.LOBBY.NOTENOUGTPLAYERS", "%PREFIX% &cWarte auf weitere Spieler...");
+        cfg.addDefault("SURVIVALGAMES.MESSAGE.NOPERMISSION", "%PREFIX% &4Keine Berechtigung!");
+        cfg.addDefault("SURVIVALGAMES.MESSAGE.NOMINECRAFTACCOUNT", "%PREFIX% &cEs existiert kein Minecraftaccount mit diesem Namen!");
+        cfg.addDefault("SURVIVALGAMES.MESSAGE.NOTENOUGTPLAYERS", "%PREFIX% &cWarte auf weitere Spieler...");
 
         cfg.addDefault("SURVIVALGAMES.MESSAGE.LOBBY.JOIN", "%PREFIX% &e%PLAYER% &7hat das Spiel betreten.");
         cfg.addDefault("SURVIVALGAMES.MESSAGE.INGAME.JOIN", "%PREFIX% &4Spiel läuft bereits!");

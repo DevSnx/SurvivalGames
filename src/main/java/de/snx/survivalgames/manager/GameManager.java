@@ -1,6 +1,7 @@
 package de.snx.survivalgames.manager;
 
 import de.snx.survivalgames.SurvivalGames;
+import de.snx.survivalgames.commands.SurvivalGamesCommand;
 import de.snx.survivalgames.listener.ServerListPing;
 import de.snx.survivalgames.listener.player.*;
 import de.snx.survivalgames.manager.other.GameType;
@@ -45,6 +46,8 @@ public class GameManager {
         load.registerEvents(new PlayerJoin(), SurvivalGames.getInstance());
         load.registerEvents(new PlayerInteract(), SurvivalGames.getInstance());
         load.registerEvents(new ServerListPing(), SurvivalGames.getInstance());
+
+        SurvivalGames.getInstance().getCommand("survivalgames").setExecutor(new SurvivalGamesCommand());
     }
 
     public GameType getGameType() {

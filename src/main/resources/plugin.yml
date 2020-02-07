@@ -3,8 +3,9 @@ version: 1.0
 author: Snx
 
 main: de.snx.survivalgames.SurvivalGames
+
 commands:
-  surivalgames:
-    aliases: [sg]
+  survivalgames:
+    aliases: [sg, game, start]
     permission: survivalgames.help
     description: show all sg commands
