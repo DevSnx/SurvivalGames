@@ -48,7 +48,7 @@ public class RestartTask {
     }
 
     public static String getMessage(String path, int Sekunden) {
-        String messages = SurvivalGames.getFileManager().getMessageFile().getConfig().getString(path);
+        String messages = SurvivalGames.getLanguageManager().getMessage(path);
         //messages = messages.replace("&", "§").replace("%PREFIX%", Main.getPreix()).replace("%SEKUNDEN%", String.valueOf(Sekunden));
         return messages;
     }

@@ -12,7 +12,7 @@ public class AsyncPlayerPreLogin implements Listener {
     @EventHandler(priority = EventPriority.MONITOR)
     public void onAsncyJoin(AsyncPlayerPreLoginEvent event){
         if(!(SurvivalGames.getGameManager().getGameType() == GameType.LOBBYPHASE)){
-            String message = SurvivalGames.getFileManager().getMessageFile().getMessage("SURVIVALGAMES.MESSAGE.INGAME.JOIN");
+            String message = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.INGAME.JOIN");
             message = message.replace("&", "§");
             event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_OTHER, message);
         }

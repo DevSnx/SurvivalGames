@@ -14,7 +14,8 @@ public class PlayerJoin implements Listener {
         Player p = event.getPlayer();
         event.setJoinMessage(null);
         if(SurvivalGames.getGameManager().getGameType() == GameType.LOBBYPHASE){
-            String message = SurvivalGames.getFileManager().getMessageFile().getMessage("SURVIVALGAMES.MESSAGE.LOBBY.JOIN");
+            String message = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.LOBBY.JOIN");
+            message = message.replace("&", "§");
             message = message.replace("%PLAYER%", p.getName());
             event.setJoinMessage(message);
         }

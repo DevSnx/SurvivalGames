@@ -13,6 +13,7 @@ public class ConfigFile extends FileBase {
     private void writeDefaults() {
         FileConfiguration cfg = getConfig();
         cfg.addDefault("SURIVALGAMES.CONFIG.PREFIX", "&8[&aSurvivalGames&8]");
+        cfg.addDefault("SURIVALGAMES.CONFIG.LANGUAGE", "en_EN");
         cfg.addDefault("SURIVALGAMES.CONFIG.FALLBACKSERVER", "Lobby");
         cfg.addDefault("SURIVALGAMES.CONFIG.MIN_PLAYERS", 2);
         cfg.addDefault("SURIVALGAMES.CONFIG.MAX_PLAYERS", 8);

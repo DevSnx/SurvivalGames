@@ -4,6 +4,7 @@ import de.snx.statsapi.StatsAPI;
 import de.snx.statsapi.manager.StatsManager;
 import de.snx.survivalgames.manager.FileManager;
 import de.snx.survivalgames.manager.GameManager;
+import de.snx.survivalgames.manager.LanguageManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SurvivalGames extends JavaPlugin {
@@ -12,6 +13,7 @@ public class SurvivalGames extends JavaPlugin {
     public static FileManager fileManager;
     public static StatsAPI statsAPI;
     public static GameManager gameManager;
+    public static LanguageManager languageManager;
 
     @Override
     public void onDisable() {
@@ -23,6 +25,7 @@ public class SurvivalGames extends JavaPlugin {
         instance = this;
         this.fileManager = new FileManager();
         this.gameManager = new GameManager();
+        this.languageManager = new LanguageManager();
     }
 
     public static SurvivalGames getInstance() {
@@ -39,5 +42,9 @@ public class SurvivalGames extends JavaPlugin {
 
     public static StatsAPI getStatsAPI() {
         return statsAPI;
+    }
+
+    public static LanguageManager getLanguageManager() {
+        return languageManager;
     }
 }

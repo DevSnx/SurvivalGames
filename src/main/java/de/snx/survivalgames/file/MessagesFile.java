@@ -13,6 +13,8 @@ public class MessagesFile extends FileBase {
 
     private void writeDefaults() {
         FileConfiguration cfg = getConfig();
+        /*
+
         cfg.addDefault("SURVIVALGAMES.MESSAGE.NOPERMISSION", "%PREFIX% &4Keine Berechtigung!");
         cfg.addDefault("SURVIVALGAMES.MESSAGE.NOMINECRAFTACCOUNT", "%PREFIX% &cEs existiert kein Minecraftaccount mit diesem Namen!");
         cfg.addDefault("SURVIVALGAMES.MESSAGE.NOTENOUGTPLAYERS", "%PREFIX% &cWarte auf weitere Spieler...");
@@ -34,21 +36,8 @@ public class MessagesFile extends FileBase {
         cfg.addDefault("SURVIVALGAMES.MESSAGE.DEATH.DEATHPLAYERMESSAGE", "%PREFIX% &e%KILLER% &7hat &e%PLAYER% &7getötet.");
         cfg.addDefault("SURVIVALGAMES.MESSAGE.DEATH.DEATHMESSAGE", "%PREFIX% &e%PLAYER% &7ist gestorben.");
 
+         */
         cfg.options().copyDefaults(true);
         saveConfig();
-    }
-
-    public String getMessage(String path){
-        FileConfiguration cfg = SurvivalGames.getFileManager().getMessageFile().getConfig();
-        FileConfiguration cfg2 = SurvivalGames.getFileManager().getConfigFile().getConfig();
-        String prefix = cfg2.getString("SURIVALGAMES.CONFIG.PREFIX").replace("&", "§");
-        String message = cfg.getString(path).replace("&", "§");
-        if(message.contains("%NewLine%")){
-            message = message.replace("%NewLine%", "\n");
-        }
-        if(message.contains("%PREFIX%")){
-            message = message.replace("%PREFIX%", prefix);
-        }
-        return message;
     }
 }
