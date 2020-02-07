@@ -10,7 +10,6 @@
 
 ![Todo](https://turadox.eu/wp-content/uploads/2020/02/Commands-new.png)
  - /start
-  - test
  - /sg
  - /sg help
  - /sg start
