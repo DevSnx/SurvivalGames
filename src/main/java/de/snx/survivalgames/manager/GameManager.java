@@ -46,7 +46,7 @@ public class GameManager {
         load.registerEvents(new PlayerInteract(), SurvivalGames.getInstance());
         load.registerEvents(new ServerListPing(), SurvivalGames.getInstance());
     }
-    
+
     public GameType getGameType() {
         return gameType;
     }

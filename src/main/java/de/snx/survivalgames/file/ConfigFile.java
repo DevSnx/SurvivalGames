@@ -13,6 +13,10 @@ public class ConfigFile extends FileBase {
     private void writeDefaults() {
         FileConfiguration cfg = getConfig();
         cfg.addDefault("SURIVALGAMES.CONFIG.PREFIX", "&8[&aSurvivalGames&8]");
+        cfg.addDefault("SURIVALGAMES.CONFIG.MOTD.LOBBY", "&aLobby");
+        cfg.addDefault("SURIVALGAMES.CONFIG.MOTD.FULL_LOBBY", "&6Lobby");
+        cfg.addDefault("SURIVALGAMES.CONFIG.MOTD.INGAME", "&4Ingame");
+        cfg.addDefault("SURIVALGAMES.CONFIG.MOTD.RESTART", "&cRestart");
         cfg.options().copyDefaults(true);
         saveConfig();
     }
