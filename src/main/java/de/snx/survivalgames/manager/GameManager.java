@@ -2,10 +2,7 @@ package de.snx.survivalgames.manager;
 
 import de.snx.survivalgames.SurvivalGames;
 import de.snx.survivalgames.listener.ServerListPing;
-import de.snx.survivalgames.listener.player.PlayerInteract;
-import de.snx.survivalgames.listener.player.PlayerJoin;
-import de.snx.survivalgames.listener.player.PlayerPickupItem;
-import de.snx.survivalgames.listener.player.PlayerQuit;
+import de.snx.survivalgames.listener.player.*;
 import de.snx.survivalgames.manager.other.GameType;
 import de.snx.survivalgames.tasks.LobbyTask;
 import org.bukkit.Bukkit;
@@ -38,6 +35,9 @@ public class GameManager {
 
     private void loadSG(){
         PluginManager load = Bukkit.getPluginManager();
+        load.registerEvents(new AsyncPlayerPreLogin(), SurvivalGames.getInstance());
+        load.registerEvents(new FoodLevelChange(), SurvivalGames.getInstance());
+        load.registerEvents(new PlayerLogin(), SurvivalGames.getInstance());
         load.registerEvents(new PlayerInteract(), SurvivalGames.getInstance());
         load.registerEvents(new PlayerJoin(), SurvivalGames.getInstance());
         load.registerEvents(new PlayerQuit(), SurvivalGames.getInstance());

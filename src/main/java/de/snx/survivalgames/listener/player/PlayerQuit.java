@@ -18,9 +18,5 @@ public class PlayerQuit  implements Listener {
             message = message.replace("%PLAYER%", p.getName());
             event.setQuitMessage(message);
         }
-
-        SurvivalGames.getStatsManager().addPlayerToCache(p.getUniqueId(), p.getName());
-        PlayerStats stats = SurvivalGames.getStatsManager().getPlayerStats(p.getUniqueId());
-        int kills = stats.getKills();
     }
 }
