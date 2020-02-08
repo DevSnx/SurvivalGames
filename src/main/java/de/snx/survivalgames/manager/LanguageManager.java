@@ -12,13 +12,13 @@ public class LanguageManager {
     public LanguageType languageType;
 
     public LanguageManager(){
-        loadLanguageTyppe();
         loadLanguages();
+        loadLanguageTyppe();
     }
 
     public String getMessage(String path){
         if(isLanguageFileExists(getLanguageType())){
-            File file = new File( SurvivalGames.getInstance().getDataFolder() + "languages", getLanguageType().toString() + ".yml");
+            File file = new File( "plugins/SurvivalGames/languages", getLanguageType().toString() + ".yml");
             FileConfiguration cfg = YamlConfiguration.loadConfiguration(file);
             String message = cfg.getString(path);
             message = message.replace("&", "§");
@@ -29,7 +29,7 @@ public class LanguageManager {
     }
 
     public boolean isLanguageFileExists(LanguageType languageType){
-        File file = new File(SurvivalGames.getInstance().getDataFolder() + "languages", languageType.toString() + ".yml");
+        File file = new File("plugins/SurvivalGames/languages", languageType.toString() + ".yml");
         if(file == null){
             return false;
         }else{
@@ -38,8 +38,12 @@ public class LanguageManager {
     }
 
     public void loadLanguages(){
+        File Language = new File(SurvivalGames.getInstance().getDataFolder(), "language.yml");
         File de_DE = new File(SurvivalGames.getInstance().getDataFolder() + "languages", "de_DE.yml");
         File en_EN = new File(SurvivalGames.getInstance().getDataFolder() + "languages", "en_EN.yml");
+        if(!Language.exists()){
+            SurvivalGames.getInstance().saveResource("language.yml", false);
+        }
         if(!de_DE.exists()){
             SurvivalGames.getInstance().saveResource("languages/de_DE.yml", false);
         }
@@ -49,7 +53,9 @@ public class LanguageManager {
     }
 
     public void loadLanguageTyppe(){
-       this.languageType = LanguageType.getLanguageByName(SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.LANGUAGE"));
+        File Language = new File(SurvivalGames.getInstance().getDataFolder(), "language.yml");
+        FileConfiguration cfg = YamlConfiguration.loadConfiguration(Language);
+        this.languageType = LanguageType.getLanguageByName(cfg.getString("LANGUAGE"));
     }
 
     public LanguageType getLanguageType() {
