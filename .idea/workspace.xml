@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -25,16 +26,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/languages" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\github\SurvivalGames\src\main\resources\languages" />
+      <recent name="C:\github\SurvivalGames" />
+      <recent name="C:\github\SurvivalGames\src\main\java" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\github\SurvivalGames" />
       <recent name="C:\github\SurvivalGames\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\github\SurvivalGames" />
-      <recent name="C:\github\SurvivalGames\src\main\java" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -50,7 +52,14 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.yml" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="732" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581120572873">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="732" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581120572873" />
     <state x="811" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1580838914115">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -63,26 +72,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580863559837" />
-    <state width="1877" height="134" key="GridCell.Tab.0.bottom" timestamp="1581114749855">
+    <state width="1877" height="134" key="GridCell.Tab.0.bottom" timestamp="1581120787863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="111" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581113463632" />
-    <state width="1877" height="134" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581114749855" />
-    <state width="1877" height="134" key="GridCell.Tab.0.center" timestamp="1581114749855">
+    <state width="1877" height="134" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581120787863" />
+    <state width="1877" height="134" key="GridCell.Tab.0.center" timestamp="1581120787863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="111" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581113463632" />
-    <state width="1877" height="134" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581114749855" />
-    <state width="1877" height="134" key="GridCell.Tab.0.left" timestamp="1581114749854">
+    <state width="1877" height="134" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581120787863" />
+    <state width="1877" height="134" key="GridCell.Tab.0.left" timestamp="1581120787863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="111" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581113463632" />
-    <state width="1877" height="134" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581114749854" />
-    <state width="1877" height="134" key="GridCell.Tab.0.right" timestamp="1581114749855">
+    <state width="1877" height="134" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581120787863" />
+    <state width="1877" height="134" key="GridCell.Tab.0.right" timestamp="1581120787863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="111" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581113463632" />
-    <state width="1877" height="134" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581114749855" />
+    <state width="1877" height="134" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581120787863" />
     <state x="342" y="225" key="new project wizard" timestamp="1580863567665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

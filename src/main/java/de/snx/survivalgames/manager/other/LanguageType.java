@@ -2,7 +2,7 @@ package de.snx.survivalgames.manager.other;
 
 public enum LanguageType {
 
-    de_DE, en_EN;
+    de_DE, en_EN, fr_FR;
 
     public static LanguageType getLanguageByName(String name) {
         LanguageType[] arrayOfLanguages;

@@ -1,5 +1,7 @@
 SURIVALGAMES:
   CONFIG:
+# Select Languages from (en_EN , de_DE)
+    LANGUAGE: en_EN
     PREFIX: '&8[&aSurvivalGames&8]'
     FALLBACKSERVER: Lobby
     MIN_PLAYERS: 2

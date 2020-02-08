@@ -13,11 +13,12 @@ public class LanguageManager {
 
     public LanguageManager(){
         loadLanguageTyppe();
+        loadLanguages();
     }
 
     public String getMessage(String path){
         if(isLanguageFileExists(getLanguageType())){
-            File file = new File("plugins/SurvivalGames/languages", getLanguageType().toString() + ".yml");
+            File file = new File( SurvivalGames.getInstance().getDataFolder() + "languages", getLanguageType().toString() + ".yml");
             FileConfiguration cfg = YamlConfiguration.loadConfiguration(file);
             String message = cfg.getString(path);
             message = message.replace("&", "§");
@@ -28,11 +29,22 @@ public class LanguageManager {
     }
 
     public boolean isLanguageFileExists(LanguageType languageType){
-        File file = new File("plugins/SurvivalGames/languages", languageType.toString() + ".yml");
+        File file = new File(SurvivalGames.getInstance().getDataFolder() + "languages", languageType.toString() + ".yml");
         if(file == null){
             return false;
         }else{
             return true;
+        }
+    }
+
+    public void loadLanguages(){
+        File de_DE = new File(SurvivalGames.getInstance().getDataFolder() + "languages", "de_DE.yml");
+        File en_EN = new File(SurvivalGames.getInstance().getDataFolder() + "languages", "en_EN.yml");
+        if(!de_DE.exists()){
+            SurvivalGames.getInstance().saveResource("languages/de_DE.yml", false);
+        }
+        if(!(en_EN.exists())){
+            SurvivalGames.getInstance().saveResource("languages/en_EN.yml", false);
         }
     }
 
