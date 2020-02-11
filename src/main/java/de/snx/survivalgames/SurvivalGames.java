@@ -27,13 +27,7 @@ public class SurvivalGames extends JavaPlugin {
         this.fileManager = new FileManager();
         this.gameManager = new GameManager();
         this.languageManager = new LanguageManager();
-
         LobbyTask.start();
-
-    }
-
-    public static SurvivalGames getInstance() {
-        return instance;
     }
 
     public static FileManager getFileManager() {
@@ -50,5 +44,9 @@ public class SurvivalGames extends JavaPlugin {
 
     public static LanguageManager getLanguageManager() {
         return languageManager;
+    }
+
+    public static SurvivalGames getInstance() {
+        return instance;
     }
 }

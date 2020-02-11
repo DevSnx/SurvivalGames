@@ -20,7 +20,12 @@ public class ConfigFile extends FileBase {
         cfg.addDefault("SURIVALGAMES.CONFIG.MOTD.FULL_LOBBY", "&6Lobby");
         cfg.addDefault("SURIVALGAMES.CONFIG.MOTD.INGAME", "&4Ingame");
         cfg.addDefault("SURIVALGAMES.CONFIG.MOTD.RESTART", "&cRestart");
-        cfg.addDefault("SURIVALGAMES.CONFIG.COUNTDOWN.LOBBY", 61);
+        cfg.addDefault("SURIVALGAMES.CONFIG.COUNTDOWN.LOBBYTIME", 61);
+        cfg.addDefault("SURIVALGAMES.CONFIG.COUNTDOWN.SPAWNTIME", 5);
+        cfg.addDefault("SURIVALGAMES.CONFIG.COUNTDOWN.GRAYTIME", 300);
+        cfg.addDefault("SURIVALGAMES.CONFIG.COUNTDOWN.GAMETIME", 10000);
+        cfg.addDefault("SURIVALGAMES.CONFIG.COUNTDOWN.DEATHMATCHTIME", 500);
+        cfg.addDefault("SURIVALGAMES.CONFIG.COUNTDOWN.RESTARTIME", 15);
         cfg.options().copyDefaults(true);
         saveConfig();
     }

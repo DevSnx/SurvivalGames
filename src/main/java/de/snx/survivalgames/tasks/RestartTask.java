@@ -23,17 +23,16 @@ public class RestartTask {
                     case 4:
                     case 3:
                     case 2:
-                        Bukkit.broadcastMessage(getMessage("SURVIVALGAMES.MESSAGE.COUNTDOWN.RESTARTSERVER.BROADCAST.MESSAGE", neustartime));
-                        break;
                     case 1:
-                        Bukkit.broadcastMessage(getMessage("SURVIVALGAMES.MESSAGE.COUNTDOWN.RESTARTSERVER.BROADCAST.MESSAGE", neustartime));
+                        String message = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.COUNTDOWN.RESTART");
+                        message = message.replace("%SECONDS%", String.valueOf(neustartime));
+                        Bukkit.broadcastMessage(message);
+                        break;
+                    case 0:
                         for(Player all : Bukkit.getOnlinePlayers()){
                             Utils.joinserver(all, SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.FALLBACKSERVER"));
                         }
-                        break;
-                    case 0:
                         Bukkit.getServer().shutdown();
-                        stop();
                         break;
                     default:
                         break;
@@ -44,11 +43,5 @@ public class RestartTask {
 
     public static void stop() {
         Bukkit.getScheduler().cancelTask(neustartrun);
-    }
-
-    public static String getMessage(String path, int Sekunden) {
-        String messages = SurvivalGames.getLanguageManager().getMessage(path);
-        //messages = messages.replace("&", "§").replace("%PREFIX%", Main.getPreix()).replace("%SEKUNDEN%", String.valueOf(Sekunden));
-        return messages;
     }
 }
