@@ -6,6 +6,6 @@ main: de.snx.survivalgames.SurvivalGames
 
 commands:
   survivalgames:
-    aliases: [sg, game, start]
-    permission: survivalgames.help
+    aliases: [sg]
+    permission: survivalgames.admin
     description: show all sg commands

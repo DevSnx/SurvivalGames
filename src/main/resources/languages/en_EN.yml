@@ -20,3 +20,14 @@ SURVIVALGAMES:
       PLAYERMESSAGE: '%PREFIX% &7&e%KILLER% &7has killed you.'
       DEATHPLAYERMESSAGE: '%PREFIX% &e%KILLER% &7has killed &e%PLAYER%.'
       DEATHMESSAGE: '%PREFIX% &e%PLAYER% &7is died.'
+  COMMANDS:
+    START:
+      MESSAGE: '%PREFIX% &7You started the game!'
+    SETSPAWN:
+      MESSAGE: '%PREFIX% &7You set the spawn for &e%SPAWNPOINT%'
+    HELPSITE:
+      - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'
+      - ' &8▪ &7/sg start &8- &7Starts the game!'
+      - ' &8▪ &7/sg setlobby &8- &7Sets the lobby spawn!'
+      - ' &8▪ &7/sg setspawn <id> &8- &7Set a player spawn!'
+      - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'

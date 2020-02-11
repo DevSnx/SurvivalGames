@@ -8,20 +8,16 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class LobbyTask {
 
-    public static int Lobby;
+    public static int lobby;
     public static int lobbyint = 61;
 
     public static void start(){
-
-        Lobby = Bukkit.getScheduler().scheduleAsyncRepeatingTask(SurvivalGames.getInstance(), new BukkitRunnable() {
+        lobby = Bukkit.getScheduler().scheduleAsyncRepeatingTask(SurvivalGames.getInstance(), new BukkitRunnable() {
 
             @Override
             public void run() {
-
                 lobbyint--;
-
                 switch (lobbyint){
-
                     case 60:
                     case 50:
                     case 40:
@@ -53,8 +49,7 @@ public class LobbyTask {
             }
         }, 0, 1*20);
     }
-
     public static void stop(){
-        Bukkit.getScheduler().cancelTask(Lobby);
+        Bukkit.getScheduler().cancelTask(lobby);
     }
 }
