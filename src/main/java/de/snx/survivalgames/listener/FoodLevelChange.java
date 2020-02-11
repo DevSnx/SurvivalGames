@@ -1,7 +1,6 @@
 package de.snx.survivalgames.listener;
 
 import de.snx.survivalgames.SurvivalGames;
-import de.snx.survivalgames.manager.GameManager;
 import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -12,7 +11,9 @@ public class FoodLevelChange implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void FoodlevelChange(FoodLevelChangeEvent event){
-        if(SurvivalGames.getGameManager().getGameType() == GameType.LOBBYPHASE || SurvivalGames.getGameManager().getGameType() == GameType.NEUSTARTPHASE){
+        if(SurvivalGames.getGameManager().getGameType() == GameType.LOBBYPHASE
+                || SurvivalGames.getGameManager().getGameType() == GameType.NEUSTARTPHASE
+                || SurvivalGames.getGameManager().getGameType() == GameType.SPAWNPHASE){
             event.setCancelled(true);
         }
     }

@@ -2,8 +2,7 @@ package de.snx.survivalgames.manager;
 
 import de.snx.survivalgames.SurvivalGames;
 import de.snx.survivalgames.commands.SurvivalGamesCommand;
-import de.snx.survivalgames.listener.FoodLevelChange;
-import de.snx.survivalgames.listener.ServerListPing;
+import de.snx.survivalgames.listener.*;
 import de.snx.survivalgames.listener.player.*;
 import de.snx.survivalgames.manager.other.GameType;
 import de.snx.survivalgames.tasks.LobbyTask;
@@ -45,6 +44,10 @@ public class GameManager {
         load.registerEvents(new PlayerJoin(), SurvivalGames.getInstance());
         load.registerEvents(new PlayerInteract(), SurvivalGames.getInstance());
         load.registerEvents(new ServerListPing(), SurvivalGames.getInstance());
+        load.registerEvents(new BlockPlace(), SurvivalGames.getInstance());
+        load.registerEvents(new BlockBreak(), SurvivalGames.getInstance());
+        load.registerEvents(new EntityDamage(), SurvivalGames.getInstance());
+
         SurvivalGames.getInstance().getCommand("survivalgames").setExecutor(new SurvivalGamesCommand());
     }
 

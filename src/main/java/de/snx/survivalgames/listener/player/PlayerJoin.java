@@ -18,8 +18,10 @@ public class PlayerJoin implements Listener {
             message = message.replace("&", "§");
             message = message.replace("%PLAYER%", p.getName());
             event.setJoinMessage(message);
-        }else{
-            event.setJoinMessage(null);
+            p.setHealth(20D);
+            p.setFoodLevel(20);
+            p.getInventory().clear();
+            p.teleport(SurvivalGames.getFileManager().getLocationFile().getLocation("LOBBY"));
         }
     }
 }
