@@ -20,6 +20,7 @@ public class ConfigFile extends FileBase {
         cfg.addDefault("SURIVALGAMES.CONFIG.MOTD.FULL_LOBBY", "&6Lobby");
         cfg.addDefault("SURIVALGAMES.CONFIG.MOTD.INGAME", "&4Ingame");
         cfg.addDefault("SURIVALGAMES.CONFIG.MOTD.RESTART", "&cRestart");
+        cfg.addDefault("SURIVALGAMES.CONFIG.COUNTDOWN.LOBBY", 61);
         cfg.options().copyDefaults(true);
         saveConfig();
     }

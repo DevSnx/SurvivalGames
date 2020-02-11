@@ -1,7 +1,8 @@
 package de.snx.survivalgames.listener.player;
 
-import de.snx.survivalgames.manager.other.GameType;
+import de.snx.survivalgames.manager.GameManager;
 import de.snx.survivalgames.SurvivalGames;
+import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,12 +13,13 @@ public class PlayerJoin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event){
         Player p = event.getPlayer();
-        event.setJoinMessage(null);
         if(SurvivalGames.getGameManager().getGameType() == GameType.LOBBYPHASE){
             String message = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.LOBBY.JOIN");
             message = message.replace("&", "§");
             message = message.replace("%PLAYER%", p.getName());
             event.setJoinMessage(message);
+        }else{
+            event.setJoinMessage(null);
         }
     }
 }

@@ -2,13 +2,13 @@ SURVIVALGAMES:
   MESSAGE:
     NOPERMISSION: '%PREFIX% &4No Permissions!'
     NOMINECRAFTACCOUNT: '%PREFIX% &cThere is no Minecraft account with this name!'
-    NOTENOUGTPLAYERS: '%PREFIX% &cWait for more players...'
+    NOTENOUGTPLAYERS: '%PREFIX% &cWaiting for other players...'
     LOBBY:
       JOIN: '%PREFIX% &e%PLAYER% &7has join the Battle.'
       QUIT: '%PREFIX% &e%PLAYER% &7has left the Battle.'
     INGAME:
       JOIN: '%PREFIX% &4Game are in progress!'
-      QUIT: '%PREFIX% &e%PLAYER% &7has left the Battle.'
+      QUIT: '%PREFIX% &e%PLAYER% &7has left the Battle. %LEFTPLAYERS%'
     COUNTDOWN:
       LOBBY: '%PREFIX% &7The Games ist starting in &e%SECONDS% &7Seconds.'
       SPAWN: '%PREFIX% &7The Battle begin in &e%SECONDS% &7Seconds.'

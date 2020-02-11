@@ -9,3 +9,8 @@ SURIVALGAMES:
       FULL_LOBBY: '&6Lobby'
       INGAME: '&4Ingame'
       RESTART: '&cRestart'
+    COUNTDOWN:
+      LOBBY: 61
+      SPAWN: 6
+      RESTART: 15
+      DEATHMATCH: 61

@@ -1,6 +1,7 @@
 package de.snx.survivalgames.listener.player;
 
 import de.snx.survivalgames.SurvivalGames;
+import de.snx.survivalgames.manager.GameManager;
 import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;

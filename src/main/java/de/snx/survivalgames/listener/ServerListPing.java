@@ -1,6 +1,7 @@
 package de.snx.survivalgames.listener;
 
 import de.snx.survivalgames.SurvivalGames;
+import de.snx.survivalgames.manager.GameManager;
 import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
@@ -24,7 +25,8 @@ public class ServerListPing implements Listener {
         }else if(SurvivalGames.getGameManager().getGameType() == GameType.NEUSTARTPHASE){
             event.setMotd(SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.MOTD.RESTART").replace("&", "§"));
         }else{
-            event.setMotd("§aSurvivalGames §7by §bSnx");
+            event.setMotd("§aSurvivalGames v.§c" + SurvivalGames.getInstance().getDescription().getVersion() + " §7by §bSnx");
         }
+        event.setMaxPlayers(SurvivalGames.getGameManager().getMaxplayers());
     }
 }

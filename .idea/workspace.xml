@@ -10,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -26,7 +26,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/languages" />
+    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/org/spigot/spigot/1.15.1/spigot-1.15.1.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -38,6 +42,14 @@
       <recent name="C:\github\SurvivalGames" />
       <recent name="C:\github\SurvivalGames\src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="JarApplication" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+      <option name="JAR_PATH" value="$USER_HOME$/Desktop/Neuer Ordner/TEST/spigot-1.14.4.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\haene\Desktop\Neuer Ordner\TEST\plugins" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -56,6 +68,14 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.yml" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="752" y="297" key="#BuildArtifactsBeforeRunChooser" timestamp="1581437244118">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="297" key="#BuildArtifactsBeforeRunChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581437244118" />
+    <state x="426" y="128" width="1092" height="721" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581437248281">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="426" y="128" width="1092" height="721" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581437248281" />
     <state x="732" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581120572873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -64,34 +84,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="811" y="413" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580838914115" />
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580829236975">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581433113721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580829236975" />
-    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1580863559837">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581433113721" />
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1581438662936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1580863559837" />
-    <state width="1877" height="129" key="GridCell.Tab.0.bottom" timestamp="1581121659106">
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581438662936" />
+    <state width="1877" height="154" key="GridCell.Tab.0.bottom" timestamp="1581441357468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="111" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581113463632" />
-    <state width="1877" height="129" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581121659106" />
-    <state width="1877" height="129" key="GridCell.Tab.0.center" timestamp="1581121659105">
+    <state width="1877" height="154" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581441247801" />
+    <state width="1877" height="154" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581441357468" />
+    <state width="1877" height="154" key="GridCell.Tab.0.center" timestamp="1581441357468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="111" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581113463632" />
-    <state width="1877" height="129" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581121659105" />
-    <state width="1877" height="129" key="GridCell.Tab.0.left" timestamp="1581121659105">
+    <state width="1877" height="154" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581441247801" />
+    <state width="1877" height="154" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581441357468" />
+    <state width="1877" height="154" key="GridCell.Tab.0.left" timestamp="1581441357468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="111" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581113463632" />
-    <state width="1877" height="129" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581121659105" />
-    <state width="1877" height="129" key="GridCell.Tab.0.right" timestamp="1581121659105">
+    <state width="1877" height="154" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581441247801" />
+    <state width="1877" height="154" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581441357468" />
+    <state width="1877" height="154" key="GridCell.Tab.0.right" timestamp="1581441357468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="111" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581113463632" />
-    <state width="1877" height="129" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581121659105" />
+    <state width="1877" height="154" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581441247801" />
+    <state width="1877" height="154" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581441357468" />
+    <state x="463" y="166" key="SettingsEditor" timestamp="1581438667013">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="166" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581438667013" />
     <state x="342" y="225" key="new project wizard" timestamp="1580863567665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -100,5 +124,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581113142768" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581437589098">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581437589098" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="SurvivalGames" type="b2602c69:ProjectViewProjectNode" />
+        <item name="SurvivalGames" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
   </component>
 </project>

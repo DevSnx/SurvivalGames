@@ -1,7 +1,6 @@
 package de.snx.survivalgames.tasks;
 
 import de.snx.survivalgames.SurvivalGames;
-import de.snx.survivalgames.manager.other.GameType;
 import de.snx.survivalgames.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

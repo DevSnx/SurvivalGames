@@ -2,6 +2,7 @@ package de.snx.survivalgames.manager;
 
 import de.snx.survivalgames.SurvivalGames;
 import de.snx.survivalgames.commands.SurvivalGamesCommand;
+import de.snx.survivalgames.listener.FoodLevelChange;
 import de.snx.survivalgames.listener.ServerListPing;
 import de.snx.survivalgames.listener.player.*;
 import de.snx.survivalgames.manager.other.GameType;
@@ -17,6 +18,8 @@ public class GameManager {
     public int restartCooldown;
     public int pregameCooldown;
     public int deathmatchCooldown;
+    public int min_players;
+    public int maxplayers;
 
     public GameManager(){
         this.gameType = GameType.LOBBYPHASE;
@@ -25,13 +28,9 @@ public class GameManager {
         this.restartCooldown = 16;
         this.pregameCooldown = 301;
         this.deathmatchCooldown = 301;
+        this.min_players = 4;
+        this.maxplayers = 8;
         loadSG();
-        startSG();
-    }
-
-    private void startSG(){
-        this.gameType = GameType.LOBBYPHASE;
-        LobbyTask.start();
     }
 
     private void loadSG(){
@@ -46,7 +45,6 @@ public class GameManager {
         load.registerEvents(new PlayerJoin(), SurvivalGames.getInstance());
         load.registerEvents(new PlayerInteract(), SurvivalGames.getInstance());
         load.registerEvents(new ServerListPing(), SurvivalGames.getInstance());
-
         SurvivalGames.getInstance().getCommand("survivalgames").setExecutor(new SurvivalGamesCommand());
     }
 
@@ -76,5 +74,13 @@ public class GameManager {
 
     public int getRestartCooldown() {
         return this.restartCooldown;
+    }
+
+    public int getMin_players() {
+        return this.min_players;
+    }
+
+    public int getMaxplayers() {
+        return this.maxplayers;
     }
 }

@@ -4,6 +4,7 @@ import de.snx.statsapi.StatsAPI;
 import de.snx.survivalgames.manager.FileManager;
 import de.snx.survivalgames.manager.GameManager;
 import de.snx.survivalgames.manager.LanguageManager;
+import de.snx.survivalgames.tasks.LobbyTask;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SurvivalGames extends JavaPlugin {
@@ -25,6 +26,9 @@ public class SurvivalGames extends JavaPlugin {
         this.fileManager = new FileManager();
         this.gameManager = new GameManager();
         this.languageManager = new LanguageManager();
+
+        LobbyTask.start();
+
     }
 
     public static SurvivalGames getInstance() {

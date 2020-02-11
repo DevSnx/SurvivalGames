@@ -8,17 +8,12 @@ import org.bukkit.configuration.file.FileConfiguration;
 
 public class LocationFile extends FileBase {
 
-    public LocationFile(){
-        super("","location");
+    public LocationFile() {
+        super("", "location");
     }
 
 
-
-
-
-
-
-    public void saveLocation(Location loc, String path){
+    public void saveLocation(Location loc, String path) {
         FileConfiguration cfg = getConfig();
         cfg.set("LOCATION." + path + ".WORLD", loc.getWorld().getName());
         cfg.set("LOCATION." + path + ".X", Double.valueOf(loc.getX()));
@@ -29,9 +24,9 @@ public class LocationFile extends FileBase {
         saveConfig();
     }
 
-    public Location getLocation(String path){
+    public Location getLocation(String path) {
         FileConfiguration cfg = getConfig();
-        if(cfg.getString("LOCATION." + path ) != null){
+        if (cfg.getString("LOCATION." + path) != null) {
             String world = cfg.getString("LOCATION." + path + ".WORLD");
             double x = cfg.getDouble("LOCATION." + path + ".X");
             double y = cfg.getDouble("LOCATION." + path + ".Y");
@@ -42,18 +37,12 @@ public class LocationFile extends FileBase {
             loc.setPitch(pitch);
             loc.setYaw(yaw);
             return loc;
-        }else{
+        } else {
             return null;
         }
     }
 
-
-
-
-
-
-
-
-
-
+    public enum LocationType {
+        SPAWN, DEATHMATCH;
+    }
 }

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Citybuild">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/spigot/permissionsex/1.15.1/permissionsex-1.15.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/spigot/spigot/1.14.4/spigot-1.14.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/spigot/holographicdisplays/2.4.2/holographicdisplays-2.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/spigot/spigot/1.14.4/spigot-1.14.4.jar!/" />
+    </SOURCES>
+  </library>
+</component>
