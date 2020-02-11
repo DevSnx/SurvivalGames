@@ -16,9 +16,6 @@ public class PlayerQuit  implements Listener {
         Player p = event.getPlayer();
         if(SurvivalGames.getGameManager().getGameType() == GameType.LOBBYPHASE){
             String message = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.LOBBY.QUIT");
-            Bukkit.getServer().getConsoleSender().sendMessage("§4");
-            Bukkit.getServer().getConsoleSender().sendMessage("§4" + message);
-            Bukkit.getServer().getConsoleSender().sendMessage("§4");
             message = message.replace("&", "§");
             message = message.replace("%PLAYER%", p.getName());
             event.setQuitMessage(message);

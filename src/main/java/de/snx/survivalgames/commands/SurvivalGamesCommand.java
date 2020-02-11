@@ -30,7 +30,6 @@ public class SurvivalGamesCommand implements CommandExecutor {
             }
         }
         if(args.length == 1){
-            player.sendMessage("HALLO!");
             if(args[0].equalsIgnoreCase("start")){
                 if(player.hasPermission("survivalgames.start") || player.hasPermission("survivalgames.*")){
                     player.sendMessage(SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.COMMANDS.START"));
@@ -56,7 +55,7 @@ public class SurvivalGamesCommand implements CommandExecutor {
         if(args.length == 2){
             if(args[0].equalsIgnoreCase("setspawn")){
                 try{
-                    int number = Integer.parseInt(args[0]);
+                    int number = Integer.parseInt(args[1]);
                     SurvivalGames.getFileManager().getLocationFile().saveLocation(player.getLocation(), "SPAWN." + number);
                     player.sendMessage(SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.COMMANDS.SETSPAWN.SUCCESSFUL"));
                     return true;
