@@ -2,6 +2,7 @@ package de.snx.survivalgames.commands;
 
 import de.snx.survivalgames.SurvivalGames;
 import de.snx.survivalgames.manager.other.LanguageType;
+import de.snx.survivalgames.tasks.LobbyTask;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -32,6 +33,9 @@ public class SurvivalGamesCommand implements CommandExecutor {
         if(args.length == 1){
             if(args[0].equalsIgnoreCase("start")){
                 if(player.hasPermission("survivalgames.start") || player.hasPermission("survivalgames.*")){
+                    if(LobbyTask.lobbyint > 6){
+                        LobbyTask.lobbyint = 6;
+                    }
                     player.sendMessage(SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.COMMANDS.START"));
                     return true;
                 }else{

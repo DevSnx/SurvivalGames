@@ -10,13 +10,12 @@ public class SpawnTask {
     public static int spawn;
     public static int spawnint = 6;
 
-    public static void start(){
+    public static void start() {
         spawn = Bukkit.getScheduler().scheduleAsyncRepeatingTask(SurvivalGames.getInstance(), new BukkitRunnable() {
-
             @Override
             public void run() {
                 spawnint--;
-                switch (spawnint){
+                switch (spawnint) {
                     case 5:
                     case 4:
                     case 3:
@@ -27,22 +26,18 @@ public class SpawnTask {
                         Bukkit.broadcastMessage(message);
                         break;
                     case 0:
-                        if(!(Bukkit.getOnlinePlayers().size() >= SurvivalGames.getGameManager().getMin_players())){
-                            spawnint = 61;
-                            Bukkit.broadcastMessage(SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.NOTENOUGTPLAYERS"));
-                        }else{
-                            SurvivalGames.getGameManager().setGameType(GameType.SCHUTZPHASE);
-                            PreGameTask.start();
-                            stop();
-                        }
+                        SurvivalGames.getGameManager().setGameType(GameType.SCHUTZPHASE);
+                        PreGameTask.start();
+                        stop();
                         break;
                     default:
                         break;
                 }
             }
-        }, 0, 1*20);
+        }, 0, 1 * 20);
     }
-    public static void stop(){
+
+    public static void stop() {
         Bukkit.getScheduler().cancelTask(spawn);
     }
 }
