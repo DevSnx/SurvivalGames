@@ -1,7 +1,6 @@
 package de.snx.survivalgames.commands;
 
 import de.snx.survivalgames.SurvivalGames;
-import de.snx.survivalgames.manager.other.LanguageType;
 import de.snx.survivalgames.tasks.LobbyTask;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

@@ -5,18 +5,19 @@ import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.scheduler.BukkitTask;
 
 public class LobbyTask {
 
-    public static int lobby;
+    public static BukkitTask lobby;
     public static int lobbyint = 61;
 
-    public static void start(){
-        lobby = Bukkit.getScheduler().scheduleSyncRepeatingTask(SurvivalGames.getInstance(), new BukkitRunnable() {
+    public static void start() {
+        lobby = new BukkitRunnable() {
             @Override
             public void run() {
                 lobbyint--;
-                switch (lobbyint){
+                switch (lobbyint) {
                     case 60:
                     case 50:
                     case 40:
@@ -35,16 +36,16 @@ public class LobbyTask {
                         String message2 = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.COUNTDOWN.LOBBY");
                         message2 = message2.replace("%SECONDS%", String.valueOf(lobbyint));
                         Bukkit.broadcastMessage(message2);
-                        if(Bukkit.getOnlinePlayers().size() >= SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.MIN_PLAYERS")){
+                        if (Bukkit.getOnlinePlayers().size() >= SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.MIN_PLAYERS")) {
                             SurvivalGames.getGameManager().setGameType(GameType.SPAWNPHASE);
                             int id = 1;
-                            for(Player player : Bukkit.getOnlinePlayers()){
+                            for (Player player : Bukkit.getOnlinePlayers()) {
                                 player.teleport(SurvivalGames.getFileManager().getLocationFile().getLocation("SPAWN." + id));
                                 player.getInventory().clear();
                                 id++;
                             }
                             SpawnTask.start();
-                        }else{
+                        } else {
                             lobbyint = 61;
                             Bukkit.broadcastMessage(SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.NOTENOUGTPLAYERS"));
                         }
@@ -52,13 +53,12 @@ public class LobbyTask {
                     case 0:
                         stop();
                         break;
-                    default:
-                        break;
                 }
             }
-        }, 0, 1*20);
+        }.runTaskTimer(SurvivalGames.getInstance(), 0, 1 * 20);
     }
-    public static void stop(){
-        Bukkit.getScheduler().cancelTask(lobby);
+
+    public static void stop() {
+        lobby.cancel();
     }
 }

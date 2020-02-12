@@ -5,7 +5,6 @@ import de.snx.survivalgames.commands.SurvivalGamesCommand;
 import de.snx.survivalgames.listener.*;
 import de.snx.survivalgames.listener.player.*;
 import de.snx.survivalgames.manager.other.GameType;
-import de.snx.survivalgames.tasks.LobbyTask;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 
