@@ -45,6 +45,7 @@ public class LobbyTask {
                                 player.getInventory().clear();
                                 id++;
                             }
+
                             CheckTask.start();
                             SpawnTask.start();
                         } else {
