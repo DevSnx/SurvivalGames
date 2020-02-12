@@ -27,6 +27,6 @@ public class ServerListPing implements Listener {
         }else{
             event.setMotd("§aSurvivalGames v.§c" + SurvivalGames.getInstance().getDescription().getVersion() + " §7by §bSnx");
         }
-        event.setMaxPlayers(SurvivalGames.getGameManager().getMaxplayers());
+        event.setMaxPlayers(SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.MAX_PLAYERS"));
     }
 }

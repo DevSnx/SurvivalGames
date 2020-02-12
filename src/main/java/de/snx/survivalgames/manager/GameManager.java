@@ -19,8 +19,6 @@ public class GameManager {
     public int restartCooldown;
     public int pregameCooldown;
     public int deathmatchCooldown;
-    public int min_players;
-    public int maxplayers;
 
     public ArrayList<Player> players;
 
@@ -31,8 +29,6 @@ public class GameManager {
         this.restartCooldown = 16;
         this.pregameCooldown = 301;
         this.deathmatchCooldown = 301;
-        this.min_players = 4;
-        this.maxplayers = 8;
         this.players = new ArrayList<Player>();
         loadSG();
     }
@@ -82,14 +78,6 @@ public class GameManager {
 
     public int getRestartCooldown() {
         return this.restartCooldown;
-    }
-
-    public int getMin_players() {
-        return this.min_players;
-    }
-
-    public int getMaxplayers() {
-        return this.maxplayers;
     }
 
     public ArrayList<Player> getPlayers() {
