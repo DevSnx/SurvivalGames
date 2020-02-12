@@ -35,8 +35,6 @@ public class LobbyTask {
                         String message2 = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.COUNTDOWN.LOBBY");
                         message2 = message2.replace("%SECONDS%", String.valueOf(lobbyint));
                         Bukkit.broadcastMessage(message2);
-
-
                         if(Bukkit.getOnlinePlayers().size() >= SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.MIN_PLAYERS")){
                             SurvivalGames.getGameManager().setGameType(GameType.SPAWNPHASE);
                             int id = 1;
