@@ -1,9 +1,7 @@
 package de.snx.survivalgames.listener.player;
 
-import com.google.common.math.Stats;
 import de.snx.statsapi.StatsAPI;
 import de.snx.statsapi.manager.other.PlayerStats;
-import de.snx.survivalgames.SurvivalGames;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -22,8 +20,8 @@ public class PlayerDeath implements Listener {
             Player killer = event.getEntity().getKiller();
             PlayerStats playerStats = StatsAPI.getStatsManager().getPlayerStats(player.getUniqueId());
             PlayerStats killerStats = StatsAPI.getStatsManager().getPlayerStats(killer.getUniqueId());
-
-
+            killerStats.addKills(1);
+            playerStats.addDeaths(1);
         }else{
 
 

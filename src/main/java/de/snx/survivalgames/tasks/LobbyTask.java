@@ -1,6 +1,8 @@
 package de.snx.survivalgames.tasks;
 
 import com.mojang.datafixers.types.templates.Check;
+import de.snx.statsapi.StatsAPI;
+import de.snx.statsapi.manager.other.PlayerStats;
 import de.snx.survivalgames.SurvivalGames;
 import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.Bukkit;
@@ -41,6 +43,8 @@ public class LobbyTask {
                             SurvivalGames.getGameManager().setGameType(GameType.SPAWNPHASE);
                             int id = 1;
                             for (Player player : Bukkit.getOnlinePlayers()) {
+                                PlayerStats stats = StatsAPI.getStatsManager().getPlayerStats(player.getUniqueId());
+                                stats.addGames(1);
                                 player.teleport(SurvivalGames.getFileManager().getLocationFile().getLocation("SPAWN." + id));
                                 player.getInventory().clear();
                                 SurvivalGames.getGameManager().players.add(player);
