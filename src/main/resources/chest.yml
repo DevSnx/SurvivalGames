@@ -1,0 +1,15 @@
+SURVIVALGAMES:
+# ITEMID : SUBID, AMOUNT, CHANCE TO FIND IT!
+
+# CHEST is Tier 1
+  CHEST:
+    ITEMS:
+    - 264:0, 1, 8
+    - 260:0, 3, 50
+    - 297:0, 1, 50
+# ENDERCHEST is Tier 2
+  ENDERCHEST:
+    ITEMS:
+    - 264:0, 1, 8
+    - 260:0, 3, 50
+    - 297:0, 1, 50
