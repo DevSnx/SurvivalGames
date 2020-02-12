@@ -13,6 +13,30 @@ public class PlayerInteract implements Listener {
         Player p = event.getPlayer();
         if(event.getClickedBlock().getType() == Material.CHEST){
             p.sendMessage("SG CHEST");
+
+
+
+
+
+
+
+
+
+        }
+        if(event.getClickedBlock().getType() == Material.ENDER_CHEST){
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

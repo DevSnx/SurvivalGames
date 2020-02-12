@@ -1,6 +1,7 @@
 package de.snx.survivalgames;
 
 import de.snx.statsapi.StatsAPI;
+import de.snx.survivalgames.manager.ChestManager;
 import de.snx.survivalgames.manager.FileManager;
 import de.snx.survivalgames.manager.GameManager;
 import de.snx.survivalgames.manager.LanguageManager;
@@ -14,6 +15,7 @@ public class SurvivalGames extends JavaPlugin {
     public static StatsAPI statsAPI;
     public static GameManager gameManager;
     public static LanguageManager languageManager;
+    public static ChestManager chestManager;
 
     @Override
     public void onDisable() {
@@ -26,6 +28,7 @@ public class SurvivalGames extends JavaPlugin {
         this.fileManager = new FileManager();
         this.gameManager = new GameManager();
         this.languageManager = new LanguageManager();
+        this.chestManager = new ChestManager();
         LobbyTask.start();
     }
 
