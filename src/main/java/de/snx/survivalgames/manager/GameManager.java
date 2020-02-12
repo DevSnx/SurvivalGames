@@ -16,10 +16,12 @@ public class GameManager {
     GameType gameType;
 
     public ArrayList<Player> players;
+    public ArrayList<Player> spectators;
 
     public GameManager(){
         this.gameType = GameType.LOBBYPHASE;
         this.players = new ArrayList<Player>();
+        this.spectators = new ArrayList<Player>();
         loadSG();
     }
 
@@ -53,5 +55,9 @@ public class GameManager {
 
     public ArrayList<Player> getPlayers() {
         return this.players;
+    }
+
+    public ArrayList<Player> getSpectators() {
+        return this.spectators;
     }
 }
