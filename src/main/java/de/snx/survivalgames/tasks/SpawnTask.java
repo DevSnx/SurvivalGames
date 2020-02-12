@@ -8,7 +8,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class SpawnTask {
 
     public static int spawn;
-    public static int spawnint = 6;
+    public static int spawnint = SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.COUNTDOWN.SPAWNTIME");
 
     public static void start() {
         spawn = Bukkit.getScheduler().scheduleAsyncRepeatingTask(SurvivalGames.getInstance(), new BukkitRunnable() {

@@ -37,15 +37,15 @@ public class LobbyTask {
                         String message2 = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.COUNTDOWN.LOBBY");
                         message2 = message2.replace("%SECONDS%", String.valueOf(lobbyint));
                         Bukkit.broadcastMessage(message2);
-                        if (SurvivalGames.getGameManager().getPlayers().size() >= SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.MIN_PLAYERS")) {
+                        if (Bukkit.getServer().getOnlinePlayers().size() >= SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.MIN_PLAYERS")) {
                             SurvivalGames.getGameManager().setGameType(GameType.SPAWNPHASE);
                             int id = 1;
                             for (Player player : Bukkit.getOnlinePlayers()) {
                                 player.teleport(SurvivalGames.getFileManager().getLocationFile().getLocation("SPAWN." + id));
                                 player.getInventory().clear();
+                                SurvivalGames.getGameManager().players.add(player);
                                 id++;
                             }
-
                             CheckTask.start();
                             SpawnTask.start();
                         } else {

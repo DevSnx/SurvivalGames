@@ -8,7 +8,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class DeathmatchTask {
 
     public static int deathmatch;
-    public static int deathmatchint = 61;
+    public static int deathmatchint = SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.COUNTDOWN.DEATHMATCHTIME");
 
     public static void start(){
         deathmatch = Bukkit.getScheduler().scheduleAsyncRepeatingTask(SurvivalGames.getInstance(), new BukkitRunnable() {

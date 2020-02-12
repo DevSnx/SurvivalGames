@@ -14,21 +14,11 @@ import java.util.ArrayList;
 public class GameManager {
 
     GameType gameType;
-    public int lobbyCooldown;
-    public int gameCooldown;
-    public int restartCooldown;
-    public int pregameCooldown;
-    public int deathmatchCooldown;
 
     public ArrayList<Player> players;
 
     public GameManager(){
         this.gameType = GameType.LOBBYPHASE;
-        this.lobbyCooldown = 301;
-        this.gameCooldown = 301;
-        this.restartCooldown = 16;
-        this.pregameCooldown = 301;
-        this.deathmatchCooldown = 301;
         this.players = new ArrayList<Player>();
         loadSG();
     }
@@ -48,6 +38,7 @@ public class GameManager {
         load.registerEvents(new BlockPlace(), SurvivalGames.getInstance());
         load.registerEvents(new BlockBreak(), SurvivalGames.getInstance());
         load.registerEvents(new EntityDamage(), SurvivalGames.getInstance());
+        load.registerEvents(new PlayerMove(), SurvivalGames.getInstance());
 
         SurvivalGames.getInstance().getCommand("survivalgames").setExecutor(new SurvivalGamesCommand());
     }
@@ -58,26 +49,6 @@ public class GameManager {
 
     public void setGameType(GameType gameType) {
         this.gameType = gameType;
-    }
-
-    public int getDeathmatchCooldown() {
-        return this.deathmatchCooldown;
-    }
-
-    public int getGameCooldown() {
-        return this.gameCooldown;
-    }
-
-    public int getLobbyCooldown() {
-        return this.lobbyCooldown;
-    }
-
-    public int getPregameCooldown() {
-        return this.pregameCooldown;
-    }
-
-    public int getRestartCooldown() {
-        return this.restartCooldown;
     }
 
     public ArrayList<Player> getPlayers() {

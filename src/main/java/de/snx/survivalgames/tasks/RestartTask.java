@@ -9,7 +9,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class RestartTask {
 
     public static int neustartrun;
-    public static int neustartime = SurvivalGames.getGameManager().getRestartCooldown();
+    public static int neustartime = SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.COUNTDOWN.RESTARTTIME");
 
     public static void start(){
         neustartrun = Bukkit.getScheduler().scheduleSyncRepeatingTask(SurvivalGames.getInstance(), new BukkitRunnable() {

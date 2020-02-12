@@ -12,18 +12,22 @@ public class ServerListPing implements Listener {
 
     @EventHandler
     public void onPing(ServerListPingEvent event){
-        if(SurvivalGames.getGameManager().getGameType() == GameType.LOBBYPHASE){
-            if(Bukkit.getServer().getOnlinePlayers().size() != Bukkit.getServer().getMaxPlayers()){
-                event.setMotd(SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.MOTD.LOBBY").replace("&", "§"));
+        if(SurvivalGames.getFileManager().getLocationFile().getLocation("LOBBY") != null){
+            if(SurvivalGames.getGameManager().getGameType() == GameType.LOBBYPHASE){
+                if(Bukkit.getServer().getOnlinePlayers().size() != Bukkit.getServer().getMaxPlayers()){
+                    event.setMotd(SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.MOTD.LOBBY").replace("&", "§"));
+                }else{
+                    event.setMotd(SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.MOTD.FULL_LOBBY").replace("&", "§"));
+                }
+            }else if(SurvivalGames.getGameManager().getGameType() == GameType.SPAWNPHASE ||
+                    SurvivalGames.getGameManager().getGameType() == GameType.INGAMEPHASE ||
+                    SurvivalGames.getGameManager().getGameType() == GameType.DEATHMATCHPHASE){
+                event.setMotd(SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.MOTD.INGAME").replace("&", "§"));
+            }else if(SurvivalGames.getGameManager().getGameType() == GameType.NEUSTARTPHASE){
+                event.setMotd(SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.MOTD.RESTART").replace("&", "§"));
             }else{
-                event.setMotd(SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.MOTD.FULL_LOBBY").replace("&", "§"));
+                event.setMotd("§aSurvivalGames v.§c" + SurvivalGames.getInstance().getDescription().getVersion() + " §7by §bSnx");
             }
-        }else if(SurvivalGames.getGameManager().getGameType() == GameType.SPAWNPHASE ||
-                SurvivalGames.getGameManager().getGameType() == GameType.INGAMEPHASE ||
-                SurvivalGames.getGameManager().getGameType() == GameType.DEATHMATCHPHASE){
-            event.setMotd(SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.MOTD.INGAME").replace("&", "§"));
-        }else if(SurvivalGames.getGameManager().getGameType() == GameType.NEUSTARTPHASE){
-            event.setMotd(SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.MOTD.RESTART").replace("&", "§"));
         }else{
             event.setMotd("§aSurvivalGames v.§c" + SurvivalGames.getInstance().getDescription().getVersion() + " §7by §bSnx");
         }

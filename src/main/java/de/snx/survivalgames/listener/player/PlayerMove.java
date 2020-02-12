@@ -6,9 +6,10 @@ import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
-public class PlayerMove {
+public class PlayerMove implements Listener {
 
     @EventHandler (priority = EventPriority.MONITOR)
     public void onMove(PlayerMoveEvent event){

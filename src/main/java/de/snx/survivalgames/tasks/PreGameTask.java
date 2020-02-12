@@ -8,7 +8,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class PreGameTask {
 
     public static int schutzzeit;
-    public static int schutzzeitint = 61;
+    public static int schutzzeitint = SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.COUNTDOWN.GRAYTIME");
 
     public static void start(){
         schutzzeit = Bukkit.getScheduler().scheduleAsyncRepeatingTask(SurvivalGames.getInstance(), new BukkitRunnable() {
