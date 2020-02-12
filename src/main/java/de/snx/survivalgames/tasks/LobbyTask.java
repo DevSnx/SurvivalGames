@@ -1,5 +1,6 @@
 package de.snx.survivalgames.tasks;
 
+import com.mojang.datafixers.types.templates.Check;
 import de.snx.survivalgames.SurvivalGames;
 import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.Bukkit;
@@ -10,7 +11,7 @@ import org.bukkit.scheduler.BukkitTask;
 public class LobbyTask {
 
     public static BukkitTask lobby;
-    public static int lobbyint = 61;
+    public static int lobbyint = SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.COUNTDOWN.LOBBYTIME");
 
     public static void start() {
         lobby = new BukkitRunnable() {
@@ -36,7 +37,7 @@ public class LobbyTask {
                         String message2 = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.COUNTDOWN.LOBBY");
                         message2 = message2.replace("%SECONDS%", String.valueOf(lobbyint));
                         Bukkit.broadcastMessage(message2);
-                        if (Bukkit.getOnlinePlayers().size() >= SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.MIN_PLAYERS")) {
+                        if (SurvivalGames.getGameManager().getPlayers().size() >= SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.MIN_PLAYERS")) {
                             SurvivalGames.getGameManager().setGameType(GameType.SPAWNPHASE);
                             int id = 1;
                             for (Player player : Bukkit.getOnlinePlayers()) {
@@ -44,6 +45,7 @@ public class LobbyTask {
                                 player.getInventory().clear();
                                 id++;
                             }
+                            CheckTask.start();
                             SpawnTask.start();
                         } else {
                             lobbyint = 61;

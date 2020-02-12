@@ -6,7 +6,10 @@ import de.snx.survivalgames.listener.*;
 import de.snx.survivalgames.listener.player.*;
 import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
+
+import java.util.ArrayList;
 
 public class GameManager {
 
@@ -19,6 +22,8 @@ public class GameManager {
     public int min_players;
     public int maxplayers;
 
+    public ArrayList<Player> players;
+
     public GameManager(){
         this.gameType = GameType.LOBBYPHASE;
         this.lobbyCooldown = 301;
@@ -28,6 +33,7 @@ public class GameManager {
         this.deathmatchCooldown = 301;
         this.min_players = 4;
         this.maxplayers = 8;
+        this.players = new ArrayList<Player>();
         loadSG();
     }
 
@@ -84,5 +90,9 @@ public class GameManager {
 
     public int getMaxplayers() {
         return this.maxplayers;
+    }
+
+    public ArrayList<Player> getPlayers() {
+        return this.players;
     }
 }
