@@ -1,7 +1,6 @@
 name: SurvivalGames
 version: 1.0
 author: Snx
-api-version: 1.13
 
 main: de.snx.survivalgames.SurvivalGames
 

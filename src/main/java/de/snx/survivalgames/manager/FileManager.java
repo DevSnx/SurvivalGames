@@ -14,6 +14,7 @@ public class FileManager {
         this.chestFile = new ChestFile();
         this.configFile = new ConfigFile();
         this.locationFile = new LocationFile();
+        this.chestFile = new ChestFile();
     }
 
     public ConfigFile getConfigFile() {
