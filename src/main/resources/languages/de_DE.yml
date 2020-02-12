@@ -20,11 +20,19 @@ SURVIVALGAMES:
       PLAYERMESSAGE: '%PREFIX% &7Der Spieler &e%KILLER%&7 hat dich getötet.'
       DEATHPLAYERMESSAGE: '%PREFIX% &e%KILLER% &7hat &e%PLAYER% &7getötet.'
       DEATHMESSAGE: '%PREFIX% &e%PLAYER% &7ist gestorben.'
+    WONGAME:
+      - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'
+      - ''
+      - '                &41 Platz &7- &e%1STPLACE%'
+      - '                &c2 Platz &7- &e%2STPLACE%'
+      - '                &a3 Platz &7- &e%3STPLACE%'
+      - ''
+      - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'
   COMMANDS:
     START: '%PREFIX% &7Du hast das Spiel gestartet!'
     SETSPAWN:
-      SUCCESSFUL: '%PREFIX% &7You set the spawn for &e%SPAWNPOINT%'
-      ERROR: '%PREFIX% &7You must provide a valid number'
+      SUCCESSFUL: '%PREFIX% &7Du hast den &e%SPAWNPOINT% &7Spielerspawn gesetzt!'
+      ERROR: '%PREFIX% &7Bitte gib eine gültige zagl an!'
     SETLOBBY: '%PREFIX% &7Du hast den &eLobbyspawn &7gesetzt!'
     HELPSITE:
       - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'

@@ -20,6 +20,14 @@ SURVIVALGAMES:
       PLAYERMESSAGE: '%PREFIX% &7&e%KILLER% &7has killed you.'
       DEATHPLAYERMESSAGE: '%PREFIX% &e%KILLER% &7has killed &e%PLAYER%.'
       DEATHMESSAGE: '%PREFIX% &e%PLAYER% &7is died.'
+    WONGAME:
+      - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'
+      - ''
+      - '                &e1st Place &7- &e%1STPLACE%'
+      - '                &e2st Place &7- &e%2STPLACE%'
+      - '                &e3st Place &7- &e%3STPLACE%'
+      - ''
+      - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'
   COMMANDS:
     START: '%PREFIX% &7You started the game!'
     SETSPAWN:

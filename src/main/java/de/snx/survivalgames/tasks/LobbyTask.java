@@ -1,6 +1,5 @@
 package de.snx.survivalgames.tasks;
 
-import com.mojang.datafixers.types.templates.Check;
 import de.snx.statsapi.StatsAPI;
 import de.snx.statsapi.manager.other.PlayerStats;
 import de.snx.survivalgames.SurvivalGames;
@@ -42,12 +41,15 @@ public class LobbyTask {
                         if (Bukkit.getServer().getOnlinePlayers().size() >= SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.MIN_PLAYERS")) {
                             SurvivalGames.getGameManager().setGameType(GameType.SPAWNPHASE);
                             int id = 1;
-                            for (Player player : Bukkit.getOnlinePlayers()) {
-                                PlayerStats stats = StatsAPI.getStatsManager().getPlayerStats(player.getUniqueId());
+                            for (Player all : Bukkit.getOnlinePlayers()) {
+                                PlayerStats stats = StatsAPI.getStatsManager().getPlayerStats(all.getUniqueId());
+                                all.sendMessage("Deine Games = " + stats.getGames());
                                 stats.addGames(1);
-                                player.teleport(SurvivalGames.getFileManager().getLocationFile().getLocation("SPAWN." + id));
-                                player.getInventory().clear();
-                                SurvivalGames.getGameManager().players.add(player);
+                                all.sendMessage("Deine Games = " + stats.getGames());
+                                all.sendMessage("Add Game");
+                                all.teleport(SurvivalGames.getFileManager().getLocationFile().getLocation("SPAWN." + id));
+                                all.getInventory().clear();
+                                SurvivalGames.getGameManager().players.add(all);
                                 id++;
                             }
                             CheckTask.start();
@@ -64,7 +66,6 @@ public class LobbyTask {
             }
         }.runTaskTimer(SurvivalGames.getInstance(), 0, 1 * 20);
     }
-
     public static void stop() {
         lobby.cancel();
     }

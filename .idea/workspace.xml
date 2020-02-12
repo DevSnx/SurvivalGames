@@ -26,7 +26,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StatsAPI" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -93,30 +93,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581523206276" />
-    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1581545100728">
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1581547346059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581545100728" />
-    <state width="1877" height="86" key="GridCell.Tab.0.bottom" timestamp="1581545301565">
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581547346059" />
+    <state width="1877" height="86" key="GridCell.Tab.0.bottom" timestamp="1581547346837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="154" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581441247801" />
-    <state width="1877" height="86" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581545301565" />
-    <state width="1877" height="86" key="GridCell.Tab.0.center" timestamp="1581545301565">
+    <state width="1877" height="86" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581547346837" />
+    <state width="1877" height="86" key="GridCell.Tab.0.center" timestamp="1581547346836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="154" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581441247801" />
-    <state width="1877" height="86" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581545301565" />
-    <state width="1877" height="86" key="GridCell.Tab.0.left" timestamp="1581545301565">
+    <state width="1877" height="86" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581547346836" />
+    <state width="1877" height="86" key="GridCell.Tab.0.left" timestamp="1581547346836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="154" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581441247801" />
-    <state width="1877" height="86" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581545301565" />
-    <state width="1877" height="86" key="GridCell.Tab.0.right" timestamp="1581545301565">
+    <state width="1877" height="86" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581547346836" />
+    <state width="1877" height="86" key="GridCell.Tab.0.right" timestamp="1581547346836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="154" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1581441247801" />
-    <state width="1877" height="86" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581545301565" />
+    <state width="1877" height="86" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581547346836" />
     <state x="463" y="166" key="SettingsEditor" timestamp="1581438667013">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
