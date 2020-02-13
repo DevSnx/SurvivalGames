@@ -3,6 +3,7 @@ SURVIVALGAMES:
     NOPERMISSION: '%PREFIX% &4Keine Berechtigung!'
     NOMINECRAFTACCOUNT: '%PREFIX% &cEs existiert kein Minecraftaccount mit diesem Namen!'
     NOTENOUGTPLAYERS: '%PREFIX% &cWarte auf weitere Spieler...'
+    LEFTPLAYER: '%PREFIX% &7Es sind noch §e%LIVINGPLAYER% &7Spieler übrig!'
     LOBBY:
       JOIN: '%PREFIX% &e%PLAYER% &7hat das Spiel betreten.'
       QUIT: '%PREFIX% &e%PLAYER% &7hat das Spiel verlassen.'
@@ -34,9 +35,11 @@ SURVIVALGAMES:
       SUCCESSFUL: '%PREFIX% &7Du hast den &e%SPAWNPOINT% &7Spielerspawn gesetzt!'
       ERROR: '%PREFIX% &7Bitte gib eine gültige zagl an!'
     SETLOBBY: '%PREFIX% &7Du hast den &eLobbyspawn &7gesetzt!'
+    SETSPECTATOR: '%PREFIX% &7Du hast den &eSpectatorspawn &7gesetzt!'
     HELPSITE:
       - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'
       - ' &8▪ &7/sg start &8- &7Startet das Spiel!'
       - ' &8▪ &7/sg setlobby &8- &7Setzt den Lobbyspawn!'
+      - ' &8▪ &7/sg setspectator &8- &7Setzt den Spactatorspawn!'
       - ' &8▪ &7/sg setspawn <id> &8- &7Setzt einen Spielerspawn!'
       - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'

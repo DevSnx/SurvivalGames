@@ -50,6 +50,15 @@ public class SurvivalGamesCommand implements CommandExecutor {
                     SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.NOPERMISSION");
                     return true;
                 }
+            }else if(args[0].equalsIgnoreCase("setspectator")){
+                if(player.hasPermission("survivalgames.setlobby") || player.hasPermission("survivalgames.*")){
+                    SurvivalGames.getFileManager().getLocationFile().saveLocation(player.getLocation(), "LOBBY");
+                    player.sendMessage(SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.COMMANDS.SETSPECTATOR"));
+                    return true;
+                }else{
+                    SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.NOPERMISSION");
+                    return true;
+                }
             }else{
                 sendHelp(player);
                 return true;

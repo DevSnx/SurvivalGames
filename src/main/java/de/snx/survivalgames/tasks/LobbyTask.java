@@ -43,16 +43,12 @@ public class LobbyTask {
                             int id = 1;
                             for (Player all : Bukkit.getOnlinePlayers()) {
                                 PlayerStats stats = StatsAPI.getStatsManager().getPlayerStats(all.getUniqueId());
-                                all.sendMessage("Deine Games = " + stats.getGames());
                                 stats.addGames(1);
-                                all.sendMessage("Deine Games = " + stats.getGames());
-                                all.sendMessage("Add Game");
                                 all.teleport(SurvivalGames.getFileManager().getLocationFile().getLocation("SPAWN." + id));
                                 all.getInventory().clear();
                                 SurvivalGames.getGameManager().players.add(all);
                                 id++;
                             }
-                            CheckTask.start();
                             SpawnTask.start();
                         } else {
                             lobbyint = 61;

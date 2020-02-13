@@ -3,6 +3,7 @@ SURVIVALGAMES:
     NOPERMISSION: '%PREFIX% &4No Permissions!'
     NOMINECRAFTACCOUNT: '%PREFIX% &cThere is no Minecraft account with this name!'
     NOTENOUGTPLAYERS: '%PREFIX% &cWaiting for other players...'
+    LEFTPLAYER: '%PREFIX% §e%LIVINGPLAYER% &7Players left!'
     LOBBY:
       JOIN: '%PREFIX% &e%PLAYER% &7has join the Battle.'
       QUIT: '%PREFIX% &e%PLAYER% &7has left the Battle.'
@@ -34,9 +35,11 @@ SURVIVALGAMES:
       SUCCESSFUL: '%PREFIX% &7You set the spawn for &e%SPAWNPOINT%'
       ERROR: '%PREFIX% &7You must provide a valid number'
     SETLOBBY: '%PREFIX% &7You set the Lobbyspawn'
+    SETSPECTATOR: '%PREFIX% &7You set the Spectatorspawn'
     HELPSITE:
       - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'
       - ' &8▪ &7/sg start &8- &7Starts the game!'
-      - ' &8▪ &7/sg setlobby &8- &7Sets the lobby spawn!'
-      - ' &8▪ &7/sg setspawn <id> &8- &7Set a player spawn!'
+      - ' &8▪ &7/sg setlobby &8- &7Sets the Lobbyspawn!'
+      - ' &8▪ &7/sg setlobby &8- &7Sets the Spectatorspawn!'
+      - ' &8▪ &7/sg setspawn <id> &8- &7Set a Playerspawn!'
       - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'
