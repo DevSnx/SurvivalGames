@@ -41,6 +41,7 @@ public class GameManager {
         load.registerEvents(new BlockBreak(), SurvivalGames.getInstance());
         load.registerEvents(new EntityDamage(), SurvivalGames.getInstance());
         load.registerEvents(new PlayerMove(), SurvivalGames.getInstance());
+        load.registerEvents(new PlayerDropItem(), SurvivalGames.getInstance());
 
         SurvivalGames.getInstance().getCommand("survivalgames").setExecutor(new SurvivalGamesCommand());
     }

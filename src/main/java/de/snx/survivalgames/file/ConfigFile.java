@@ -14,6 +14,7 @@ public class ConfigFile extends FileBase {
         FileConfiguration cfg = getConfig();
         cfg.addDefault("SURIVALGAMES.CONFIG.PREFIX", "&8[&aSurvivalGames&8]");
         cfg.addDefault("SURIVALGAMES.CONFIG.FALLBACKSERVER", "Lobby");
+        cfg.addDefault("SURIVALGAMES.CONFIG.FALLDISTANCE", 50);
         cfg.addDefault("SURIVALGAMES.CONFIG.MIN_PLAYERS", 2);
         cfg.addDefault("SURIVALGAMES.CONFIG.MAX_PLAYERS", 8);
         cfg.addDefault("SURIVALGAMES.CONFIG.MOTD.LOBBY", "&aLobby");

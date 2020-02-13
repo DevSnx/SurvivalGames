@@ -4,12 +4,12 @@ import de.snx.survivalgames.SurvivalGames;
 import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerPickupItemEvent;
+import org.bukkit.event.player.PlayerDropItemEvent;
 
-public class PlayerPickupItem implements Listener {
+public class PlayerDropItem implements Listener {
 
     @EventHandler
-    public void onPlayerPickUpItem(PlayerPickupItemEvent event){
+    public void onPlayerDropItem(PlayerDropItemEvent event){
         if(SurvivalGames.getGameManager().getGameType() == GameType.LOBBYPHASE||SurvivalGames.getGameManager().getGameType() == GameType.NEUSTARTPHASE){
             event.setCancelled(true);
         }

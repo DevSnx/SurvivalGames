@@ -1,9 +1,9 @@
 package de.snx.survivalgames.listener.player;
 
 import de.snx.survivalgames.SurvivalGames;
-import de.snx.survivalgames.manager.GameManager;
 import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.Location;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -13,6 +13,12 @@ public class PlayerMove implements Listener {
 
     @EventHandler (priority = EventPriority.MONITOR)
     public void onMove(PlayerMoveEvent event){
+        if(SurvivalGames.getGameManager().getGameType() == GameType.LOBBYPHASE || SurvivalGames.getGameManager().getGameType() == GameType.NEUSTARTPHASE){
+            Player player = event.getPlayer();
+            if(player.getLocation().getY() < SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.FALLDISTANCE")){
+                player.teleport(SurvivalGames.getFileManager().getLocationFile().getLocation("LOBBY"));
+            }
+        }
         if(SurvivalGames.getGameManager().getGameType() == GameType.SPAWNPHASE){
             Location from = event.getFrom();
             Location to = event.getTo();

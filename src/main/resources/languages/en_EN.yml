@@ -3,7 +3,7 @@ SURVIVALGAMES:
     NOPERMISSION: '%PREFIX% &4No Permissions!'
     NOMINECRAFTACCOUNT: '%PREFIX% &cThere is no Minecraft account with this name!'
     NOTENOUGTPLAYERS: '%PREFIX% &cWaiting for other players...'
-    LEFTPLAYER: '%PREFIX% §e%LIVINGPLAYER% &7Players left!'
+    LEFTPLAYER: '%PREFIX% §e%CURRENTPLAYERS% &7Players left!'
     LOBBY:
       JOIN: '%PREFIX% &e%PLAYER% &7has join the Battle.'
       QUIT: '%PREFIX% &e%PLAYER% &7has left the Battle.'
