@@ -51,4 +51,8 @@ public class SurvivalGames extends JavaPlugin {
     public static SurvivalGames getInstance() {
         return instance;
     }
+
+    public static ChestManager getChestManager() {
+        return chestManager;
+    }
 }
