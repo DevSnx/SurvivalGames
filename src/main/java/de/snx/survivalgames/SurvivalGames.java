@@ -6,6 +6,7 @@ import de.snx.survivalgames.manager.FileManager;
 import de.snx.survivalgames.manager.GameManager;
 import de.snx.survivalgames.manager.LanguageManager;
 import de.snx.survivalgames.tasks.LobbyTask;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SurvivalGames extends JavaPlugin {
@@ -25,11 +26,27 @@ public class SurvivalGames extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        Bukkit.getConsoleSender().sendMessage("§8-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+        Bukkit.getConsoleSender().sendMessage(" ");
+        Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §cManagers is Loading...");
         this.fileManager = new FileManager();
         this.gameManager = new GameManager();
+        Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §aManagers loaded successfully!");
+        Bukkit.getConsoleSender().sendMessage(" ");
+
+        Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §cLanguage is Loading...");
         this.languageManager = new LanguageManager();
+        Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §aLanguage loaded successfully!");
+        Bukkit.getConsoleSender().sendMessage(" ");
+
+        Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §cChest Items is Loading...");
         this.chestManager = new ChestManager();
+        Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §aChest Items loaded successfully!");
+        Bukkit.getConsoleSender().sendMessage(" ");
+        Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §4§lGAME IS STARTING!!");
         LobbyTask.start();
+        Bukkit.getConsoleSender().sendMessage(" ");
+        Bukkit.getConsoleSender().sendMessage("§8-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
     }
 
     public static FileManager getFileManager() {

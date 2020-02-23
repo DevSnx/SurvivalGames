@@ -63,7 +63,7 @@ public class LanguageManager {
         if(this.languageType == LanguageType.en_EN){
             file = new File(SurvivalGames.getInstance().getDataFolder() + "/languages", "en_EN.yml");
         }else if(this.languageType == LanguageType.de_DE){
-            file = new File(SurvivalGames.getInstance().getDataFolder() + "/languages", "de_DE.yml");
+            file = new File(SurvivalGames.getInstance().getDataFolder() + "/languages  ", "de_DE.yml");
         }
         return file;
     }

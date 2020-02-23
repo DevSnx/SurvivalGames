@@ -12,20 +12,21 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
-
 import java.util.Random;
 
 public class PlayerInteract implements Listener {
 
-    @EventHandler (priority = EventPriority.HIGH)
+    @EventHandler
     public void onInteract(PlayerInteractEvent event){
         Player p = event.getPlayer();
         if(event.getAction() == Action.RIGHT_CLICK_BLOCK){
-            if(event.getClickedBlock().getType() == Material.ENDER_CHEST){
+            if(event.getClickedBlock().getType() == Material.TRAPPED_CHEST || event.getClickedBlock().getType() == Material.CHEST){
                 Location loc = event.getClickedBlock().getLocation();
                 if(SurvivalGames.getChestManager().getChests().containsKey(loc)){
+                    event.setCancelled(true);
                     p.openInventory(SurvivalGames.getChestManager().getChests().get(loc));
                 }else{
+                    event.setCancelled(true);
                     Random r = new Random();
                     int l = r.nextInt(15);
                     Inventory inv = Bukkit.createInventory(null, InventoryType.CHEST, "§cSurvivalGames §8- §aTier I");
@@ -37,12 +38,16 @@ public class PlayerInteract implements Listener {
                         int n3 = r3.nextInt(SurvivalGames.getChestManager().getItems_tier1().size());
                         inv.setItem(n2, SurvivalGames.getChestManager().getItems_tier1().get(n3));
                     }
+                    SurvivalGames.getChestManager().chests.put(loc, inv);
+                    p.openInventory(SurvivalGames.getChestManager().getChests().get(loc));
                 }
-            }else if(event.getClickedBlock().getType() == Material.CHEST){
+            }else if(event.getClickedBlock().getType() == Material.ENDER_CHEST){
                 Location loc = event.getClickedBlock().getLocation();
                 if(SurvivalGames.getChestManager().getChests().containsKey(loc)){
+                    event.setCancelled(true);
                     p.openInventory(SurvivalGames.getChestManager().getChests().get(loc));
                 }else{
+                    event.setCancelled(true);
                     Random r = new Random();
                     int l = r.nextInt(15);
                     Inventory inv = Bukkit.createInventory(null, InventoryType.CHEST, "§cSurvivalGames §8- §bTier II");
