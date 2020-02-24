@@ -15,20 +15,20 @@ SURVIVALGAMES:
       SPAWN: '%PREFIX% &7Das Spiel beginnt in &e%SECONDS% &7Sekunden.'
       PRETIME: '%PREFIX% &7Die Schutzzeit endet in &e%SECONDS% &7Sekunden.'
       DEATHMATCH: '%PREFIX% &7Das Deathmatch startet in &e%SECONDS% &7Sekunden.'
-      RESTART: '%PREFIX% &7Der Server startet in &e%SECONDS% &7Sekunden neu.'
+      RESTART: '%PREFIX% &cDer Server startet in &e%SECONDS% &cSekunden neu.'
     DEATH:
       KILLERMESSAGE: '%PREFIX% &7Du hast &e%PLAYER% &7getötet.'
       PLAYERMESSAGE: '%PREFIX% &7Der Spieler &e%KILLER%&7 hat dich getötet.'
       DEATHPLAYERMESSAGE: '%PREFIX% &e%KILLER% &7hat &e%PLAYER% &7getötet.'
       DEATHMESSAGE: '%PREFIX% &e%PLAYER% &7ist gestorben.'
     WONGAME:
-      - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'
+      - '&7&m->-----------[ &a SurvivalGames &7&m]-----------<-&7'
       - ''
       - '                &41 Platz &7- &e%1STPLACE%'
       - '                &c2 Platz &7- &e%2STPLACE%'
       - '                &a3 Platz &7- &e%3STPLACE%'
       - ''
-      - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'
+      - '&7&m->-----------[ &a SurvivalGames &7&m]-----------<-&7'
   COMMANDS:
     START: '%PREFIX% &7Du hast das Spiel gestartet!'
     SETSPAWN:

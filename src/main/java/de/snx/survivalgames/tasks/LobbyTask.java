@@ -62,6 +62,7 @@ public class LobbyTask {
             }
         }.runTaskTimer(SurvivalGames.getInstance(), 0, 1 * 20);
     }
+
     public static void stop() {
         lobby.cancel();
     }

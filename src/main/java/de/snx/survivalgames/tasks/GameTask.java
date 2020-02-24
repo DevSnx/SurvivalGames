@@ -8,7 +8,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class GameTask {
 
     public static int game;
-    public static int gameint = SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.COUNTDOWN.SPAWNTIME");
+    public static int gameint = SurvivalGames.getFileManager().getConfigFile().getConfig().getInt("SURIVALGAMES.CONFIG.COUNTDOWN.GAMETIME");
 
     public static void start(){
         game = Bukkit.getScheduler().scheduleAsyncRepeatingTask(SurvivalGames.getInstance(), new BukkitRunnable() {
@@ -28,7 +28,7 @@ public class GameTask {
                     case 3:
                     case 2:
                     case 1:
-                        String message = "";
+                        String message = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.COUNTDOWN.DEATHMATCH");
                         message = message.replace("%SECONDS%", String.valueOf(gameint));
                         Bukkit.broadcastMessage(message);
                         break;

@@ -9,7 +9,10 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 
+import javax.swing.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class GameManager {
 
@@ -18,10 +21,13 @@ public class GameManager {
     public ArrayList<Player> players;
     public ArrayList<Player> spectators;
 
+    public HashMap<Integer, Player> playerRanks;
+
     public GameManager(){
         this.gameType = GameType.LOBBYPHASE;
         this.players = new ArrayList<Player>();
         this.spectators = new ArrayList<Player>();
+        this.playerRanks = new HashMap<Integer, Player>();
         loadSG();
     }
 
@@ -42,6 +48,7 @@ public class GameManager {
         load.registerEvents(new EntityDamage(), SurvivalGames.getInstance());
         load.registerEvents(new PlayerMove(), SurvivalGames.getInstance());
         load.registerEvents(new PlayerDropItem(), SurvivalGames.getInstance());
+        load.registerEvents(new PlayerDeath(), SurvivalGames.getInstance());
 
         SurvivalGames.getInstance().getCommand("survivalgames").setExecutor(new SurvivalGamesCommand());
     }
@@ -60,5 +67,9 @@ public class GameManager {
 
     public ArrayList<Player> getSpectators() {
         return this.spectators;
+    }
+
+    public HashMap<Integer, Player> getPlayerRanks() {
+        return this.playerRanks;
     }
 }

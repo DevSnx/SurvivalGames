@@ -16,6 +16,15 @@ public class LanguageManager {
         loadLanguageTyppe();
     }
 
+    public FileConfiguration getLanguageFileConfiguration(){
+        if(isLanguageFileExists(getLanguageType())){
+            File file = new File( "plugins/SurvivalGames/languages", getLanguageType().toString() + ".yml");
+            FileConfiguration cfg = YamlConfiguration.loadConfiguration(file);
+            return cfg;
+        }
+        return null;
+    }
+
     public String getMessage(String path){
         if(isLanguageFileExists(getLanguageType())){
             File file = new File( "plugins/SurvivalGames/languages", getLanguageType().toString() + ".yml");

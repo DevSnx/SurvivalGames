@@ -3,6 +3,7 @@ package de.snx.survivalgames.listener.player;
 import de.snx.survivalgames.manager.GameManager;
 import de.snx.survivalgames.SurvivalGames;
 import de.snx.survivalgames.manager.other.GameType;
+import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -22,6 +23,7 @@ public class PlayerJoin implements Listener {
             p.setFoodLevel(20);
             p.getInventory().clear();
             p.teleport(SurvivalGames.getFileManager().getLocationFile().getLocation("LOBBY"));
+            p.setGameMode(GameMode.ADVENTURE);
         }
     }
 }

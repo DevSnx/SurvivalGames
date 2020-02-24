@@ -16,11 +16,6 @@ public class PreGameTask {
             public void run() {
                 schutzzeitint--;
                 switch(schutzzeitint){
-                    case 300:
-                    case 240:
-                    case 180:
-                    case 120:
-                    case 60:
                     case 30:
                     case 10:
                     case 5:

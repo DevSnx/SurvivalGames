@@ -1,11 +1,8 @@
 package de.snx.survivalgames.tasks;
 
-import de.snx.statsapi.StatsAPI;
-import de.snx.statsapi.manager.other.PlayerStats;
 import de.snx.survivalgames.SurvivalGames;
 import de.snx.survivalgames.manager.other.GameType;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class SpawnTask {
@@ -19,18 +16,23 @@ public class SpawnTask {
             public void run() {
                 spawnint--;
                 switch (spawnint) {
+                    case 10:
                     case 5:
                     case 4:
                     case 3:
                     case 2:
-                    case 1:
                         String message = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.COUNTDOWN.SPAWN");
                         message = message.replace("%SECONDS%", String.valueOf(spawnint));
                         Bukkit.broadcastMessage(message);
                         break;
-                    case 0:
+                    case 1:
+                        String message2 = SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.COUNTDOWN.SPAWN");
+                        message2 = message2.replace("%SECONDS%", String.valueOf(spawnint));
+                        Bukkit.broadcastMessage(message2);
                         SurvivalGames.getGameManager().setGameType(GameType.SCHUTZPHASE);
                         PreGameTask.start();
+                        break;
+                    case 0:
                         stop();
                         break;
                     default:
