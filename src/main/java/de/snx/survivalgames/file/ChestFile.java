@@ -16,9 +16,6 @@ public class ChestFile extends FileBase {
 
     public void writeDefaults(){
         FileConfiguration cfg = getConfig();
-
-        //ITEM, AMOUNT, CHANCE
-
         List<String> tier1 = cfg.getStringList("SURVIVALGAMES.CHEST.ITEMS");
         tier1.add(Material.WOODEN_SWORD.toString() + ", 1, 60");
         tier1.add(Material.IRON_SWORD.toString() + ", 1, 25");

@@ -13,11 +13,9 @@ import java.io.File;
 public class SurvivalGamesCommand implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-
         if (!(sender instanceof Player)) {
             return true;
         }
-
         Player player = (Player) sender;
         if (args.length < 1 || args.length > 2) {
             if(player.hasPermission("survivalgames.*")){
