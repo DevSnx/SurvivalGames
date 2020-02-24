@@ -34,6 +34,9 @@ SURVIVALGAMES:
     SETSPAWN:
       SUCCESSFUL: '%PREFIX% &7Du hast den &e%SPAWNPOINT% &7Spielerspawn gesetzt!'
       ERROR: '%PREFIX% &7Bitte gib eine gültige zagl an!'
+    SETDEATHMATCH:
+      SUCCESSFUL: '%PREFIX% &7Du hast den &e%SPAWNPOINT% &7Deathmatchspawn gesetzt!'
+      ERROR: '%PREFIX% &7Bitte gib eine gültige zagl an!'
     SETLOBBY: '%PREFIX% &7Du hast den &eLobbyspawn &7gesetzt!'
     SETSPECTATOR: '%PREFIX% &7Du hast den &eSpectatorspawn &7gesetzt!'
     HELPSITE:
@@ -42,4 +45,5 @@ SURVIVALGAMES:
       - ' &8▪ &7/sg setlobby &8- &7Setzt den Lobbyspawn!'
       - ' &8▪ &7/sg setspectator &8- &7Setzt den Spactatorspawn!'
       - ' &8▪ &7/sg setspawn <id> &8- &7Setzt einen Spielerspawn!'
+      - ' &8▪ &7/sg setdeatmatch <id> &8- &7Setzt einen Deathmatchspawn!'
       - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'

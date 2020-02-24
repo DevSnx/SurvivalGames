@@ -32,7 +32,10 @@ SURVIVALGAMES:
   COMMANDS:
     START: '%PREFIX% &7You started the game!'
     SETSPAWN:
-      SUCCESSFUL: '%PREFIX% &7You set the spawn for &e%SPAWNPOINT%'
+      SUCCESSFUL: '%PREFIX% &7You set the Spawn for &e%SPAWNPOINT%'
+      ERROR: '%PREFIX% &7You must provide a valid number'
+    SETDEATHMATCH:
+      SUCCESSFUL: '%PREFIX% &7You set the Deathmatchspawn for &e%SPAWNPOINT%'
       ERROR: '%PREFIX% &7You must provide a valid number'
     SETLOBBY: '%PREFIX% &7You set the Lobbyspawn'
     SETSPECTATOR: '%PREFIX% &7You set the Spectatorspawn'
@@ -42,4 +45,5 @@ SURVIVALGAMES:
       - ' &8▪ &7/sg setlobby &8- &7Sets the Lobbyspawn!'
       - ' &8▪ &7/sg setlobby &8- &7Sets the Spectatorspawn!'
       - ' &8▪ &7/sg setspawn <id> &8- &7Set a Playerspawn!'
+      - ' &8▪ &7/sg setdeatmatch <id> &8- &7Set a Deathmatchspawn!'
       - '&7&m->---------------[ &a SurvivalGames &7&m]---------------<-&7'

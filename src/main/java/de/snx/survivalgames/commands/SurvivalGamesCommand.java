@@ -15,7 +15,6 @@ public class SurvivalGamesCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if (!(sender instanceof Player)) {
-            sender.sendMessage("Nur Spieler können den Befehl ausführen!");
             return true;
         }
 
@@ -51,7 +50,7 @@ public class SurvivalGamesCommand implements CommandExecutor {
                     return true;
                 }
             }else if(args[0].equalsIgnoreCase("setspectator")){
-                if(player.hasPermission("survivalgames.setlobby") || player.hasPermission("survivalgames.*")){
+                if(player.hasPermission("survivalgames.setspectator") || player.hasPermission("survivalgames.*")){
                     SurvivalGames.getFileManager().getLocationFile().saveLocation(player.getLocation(), "LOBBY");
                     player.sendMessage(SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.COMMANDS.SETSPECTATOR"));
                     return true;
@@ -73,6 +72,16 @@ public class SurvivalGamesCommand implements CommandExecutor {
                     return true;
                 }catch( NumberFormatException ex){
                     player.sendMessage(SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.COMMANDS.SETSPAWN.ERROR"));
+                    return true;
+                }
+            }else if(args[0].equalsIgnoreCase("setdeathmatch")){
+                try{
+                    int number = Integer.parseInt(args[1]);
+                    SurvivalGames.getFileManager().getLocationFile().saveLocation(player.getLocation(), "DETHMATCH." + number);
+                    player.sendMessage(SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.COMMANDS.SETDEATHMATCH.SUCCESSFUL"));
+                    return true;
+                }catch( NumberFormatException ex){
+                    player.sendMessage(SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.COMMANDS.SETDEATHMATCH.ERROR"));
                     return true;
                 }
             }else{
