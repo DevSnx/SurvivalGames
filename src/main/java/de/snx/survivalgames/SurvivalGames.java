@@ -1,10 +1,7 @@
 package de.snx.survivalgames;
 
 import de.snx.statsapi.StatsAPI;
-import de.snx.survivalgames.manager.ChestManager;
-import de.snx.survivalgames.manager.FileManager;
-import de.snx.survivalgames.manager.GameManager;
-import de.snx.survivalgames.manager.LanguageManager;
+import de.snx.survivalgames.manager.*;
 import de.snx.survivalgames.tasks.LobbyTask;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,6 +14,8 @@ public class SurvivalGames extends JavaPlugin {
     public static GameManager gameManager;
     public static LanguageManager languageManager;
     public static ChestManager chestManager;
+    public static ScoreboardManager scoreboardManager;
+    public static TeamManager teamManager;
 
     @Override
     public void onDisable() {
@@ -31,6 +30,8 @@ public class SurvivalGames extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §cManagers is Loading...");
         this.fileManager = new FileManager();
         this.gameManager = new GameManager();
+        this.teamManager = new TeamManager();
+        this.scoreboardManager = new ScoreboardManager();
         Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §aManagers loaded successfully!");
         Bukkit.getConsoleSender().sendMessage(" ");
 
@@ -71,5 +72,13 @@ public class SurvivalGames extends JavaPlugin {
 
     public static ChestManager getChestManager() {
         return chestManager;
+    }
+
+    public static ScoreboardManager getScoreboardManager() {
+        return scoreboardManager;
+    }
+
+    public static TeamManager getTeamManager() {
+        return teamManager;
     }
 }

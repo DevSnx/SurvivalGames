@@ -4,6 +4,10 @@ SURVIVALGAMES:
     NOMINECRAFTACCOUNT: '%PREFIX% &cEs existiert kein Minecraftaccount mit diesem Namen!'
     NOTENOUGTPLAYERS: '%PREFIX% &cWarte auf weitere Spieler...'
     LEFTPLAYER: '%PREFIX% &7Es sind noch §e%CURRENTPLAYERS% &7Spieler übrig!'
+    TEAM:
+      JOIN: '&7Du bist nun im Team &e%TEAM%&7.'
+      FULL: '&cDas Team &e%TEAM% &cist voll!'
+      ALLREADYIN: '&cDu bist bereits im Team &e%TEAM%&c.'
     LOBBY:
       JOIN: '%PREFIX% &e%PLAYER% &7hat das Spiel betreten.'
       QUIT: '%PREFIX% &e%PLAYER% &7hat das Spiel verlassen.'
