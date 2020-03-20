@@ -27,10 +27,9 @@ public class PlayerJoin implements Listener {
             p.getInventory().clear();
             p.teleport(SurvivalGames.getFileManager().getLocationFile().getLocation("LOBBY"));
             p.setGameMode(GameMode.ADVENTURE);
-
-            if(SurvivalGames.getFileManager().getTeamFile().getConfig().getBoolean("TEAMS.TEAMMODE")){
-                p.getInventory().setItem(0, new ItemCreator().material(Material.RED_BED).displayName(SurvivalGames.getFileManager().getTeamFile().getConfig().getString("TEAMS.JOINITEM.NAME").replace("&", "§")).build());
-            }
+            //if(SurvivalGames.getFileManager().getTeamFile().getConfig().getBoolean("TEAMS.TEAMMODE")){
+            //    p.getInventory().setItem(0, new ItemCreator().material(Material.RED_BED).displayName(SurvivalGames.getFileManager().getTeamFile().getConfig().getString("TEAMS.JOINITEM.NAME").replace("&", "§")).build());
+            //}
         }
     }
 }
