@@ -6,7 +6,7 @@
 
     <groupId>de.snx.spigot</groupId>
     <artifactId>SurvivalGames</artifactId>
-    <version>0.0.5-BETA</version>
+    <version>0.0.5-ALPHA</version>
 
     <build>
         <plugins>
@@ -39,7 +39,7 @@
         <dependency>
             <groupId>org.spigot</groupId>
             <artifactId>statsapi</artifactId>
-            <version>1.2.1</version>
+            <version>1.2.5</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

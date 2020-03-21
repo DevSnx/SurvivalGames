@@ -69,4 +69,10 @@ public class GameManager {
     public HashMap<Integer, Player> getPlayerRanks() {
         return this.playerRanks;
     }
+
+    public void addPlayerToSpectator(Player player){
+        getPlayers().remove(player);
+        getSpectators().add(player);
+
+    }
 }

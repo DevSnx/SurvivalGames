@@ -51,8 +51,7 @@ public class LobbyTask {
                             }
                             SpawnTask.start();
                         } else {
-                            lobbyint = 61;
-                            Bukkit.broadcastMessage(SurvivalGames.getLanguageManager().getMessage("SURVIVALGAMES.MESSAGE.NOTENOUGTPLAYERS"));
+                            CheckPlayersTask.start();
                         }
                         break;
                     case 0:

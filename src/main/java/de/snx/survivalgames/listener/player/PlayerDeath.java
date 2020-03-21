@@ -7,7 +7,6 @@ import de.snx.survivalgames.manager.other.GameType;
 import de.snx.survivalgames.tasks.DeathmatchTask;
 import de.snx.survivalgames.tasks.GameTask;
 import de.snx.survivalgames.tasks.RestartTask;
-import net.minecraft.server.v1_14_R1.WorldGenSurfaceConfigurationBase;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -17,8 +16,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
-
-import javax.swing.*;
 
 public class PlayerDeath implements Listener {
 

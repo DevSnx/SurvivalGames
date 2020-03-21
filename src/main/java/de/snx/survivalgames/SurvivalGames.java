@@ -2,6 +2,7 @@ package de.snx.survivalgames;
 
 import de.snx.statsapi.StatsAPI;
 import de.snx.survivalgames.manager.*;
+import de.snx.survivalgames.tasks.CheckPlayersTask;
 import de.snx.survivalgames.tasks.LobbyTask;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -44,10 +45,10 @@ public class SurvivalGames extends JavaPlugin {
         this.chestManager = new ChestManager();
         Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §aChest Items loaded successfully!");
         Bukkit.getConsoleSender().sendMessage(" ");
-        Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §4§lGAME IS STARTING!!");
-        LobbyTask.start();
-        Bukkit.getConsoleSender().sendMessage(" ");
         Bukkit.getConsoleSender().sendMessage("§8-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+        Bukkit.getConsoleSender().sendMessage(" ");
+        Bukkit.getConsoleSender().sendMessage("§8[§aSurvivalGames§8] §4§lGAME IS STARTING!!");
+        CheckPlayersTask.start();
     }
 
     public static FileManager getFileManager() {

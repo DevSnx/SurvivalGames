@@ -18,7 +18,6 @@ public class TeamFile extends FileBase{
         cfg.addDefault("TEAMS.PLAYERSPROTEAM", 1);
         cfg.addDefault("TEAMS.JOINITEM.NAME", "&4Team Selector");
 
-
         cfg.addDefault("TEAMS." + TeamTypes.getTeambyTeamID(1).toString() + ".ENABLE", true);
         cfg.addDefault("TEAMS." + TeamTypes.getTeambyTeamID(2).toString() + ".ENABLE", true);
         cfg.addDefault("TEAMS." + TeamTypes.getTeambyTeamID(3).toString() + ".ENABLE", true);
@@ -27,5 +26,7 @@ public class TeamFile extends FileBase{
         cfg.addDefault("TEAMS." + TeamTypes.getTeambyTeamID(6).toString() + ".ENABLE", true);
         cfg.addDefault("TEAMS." + TeamTypes.getTeambyTeamID(7).toString() + ".ENABLE", true);
         cfg.addDefault("TEAMS." + TeamTypes.getTeambyTeamID(8).toString() + ".ENABLE", true);
+        cfg.options().copyDefaults(true);
+        saveConfig();
     }
 }
