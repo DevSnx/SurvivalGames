@@ -1,6 +1,7 @@
 package de.snx.survivalgames.tasks;
 
 import de.snx.survivalgames.SurvivalGames;
+import de.snx.survivalgames.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -31,13 +32,13 @@ public class RestartTask {
                         message2 = message2.replace("%SECONDS%", String.valueOf(neustartime));
                         Bukkit.broadcastMessage(message2);
                         for(Player all : Bukkit.getOnlinePlayers()){
-                            //Utils.joinserver(all, SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.FALLBACKSERVER"));
+                            Utils.joinserver(all, SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.FALLBACKSERVER"));
                             all.kickPlayer("§4RESTART!");
                         }
                         break;
                     case 0:
                         for(Player all : Bukkit.getOnlinePlayers()){
-                            //Utils.joinserver(all, SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.FALLBACKSERVER"));
+                            Utils.joinserver(all, SurvivalGames.getFileManager().getConfigFile().getConfig().getString("SURIVALGAMES.CONFIG.FALLBACKSERVER"));
                             all.kickPlayer("§4RESTART!");
                         }
                         Bukkit.getServer().shutdown();
