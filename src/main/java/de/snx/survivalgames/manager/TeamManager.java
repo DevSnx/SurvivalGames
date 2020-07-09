@@ -32,7 +32,10 @@ public class TeamManager {
     }
 
     public void addPlayerToTeam(Player player, TeamTypes teamTypes){
-
+        if(T1.contains(player)){
+            return;
+        }
+        
     }
 
     public void getTeamOfPlayer(){
