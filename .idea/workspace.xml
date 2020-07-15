@@ -77,10 +77,14 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.yml" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1594331188791">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1594840433690">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594331188791" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594840433690" />
+    <state x="342" y="215" key="new project wizard" timestamp="1594840436599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="215" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1594840436599" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
