@@ -35,7 +35,6 @@ public class TeamManager {
         if(T1.contains(player)){
             return;
         }
-        
     }
 
     public void getTeamOfPlayer(){
