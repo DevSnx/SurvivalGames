@@ -1,9 +1,8 @@
 name: SurvivalGames
-version: 1.5
-author: Snx
-api-version: 1.13
+version: 0.0.6
+author: DevSnx
 
-main: de.snx.survivalgames.SurvivalGames
+main: de.devsnx.survivalgames.SurvivalGames
 
 commands:
   survivalgames:
