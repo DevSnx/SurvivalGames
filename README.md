@@ -1,3 +1,22 @@
+## Todo
++ Any Ideas?
++ Teammode (Solo, Duo , Squad)
++ More Languages
++ Vote Maps
++ Scoreboards
+
+## Deatures
++ Multi Language System
++ MySQL Support
++ Bungeecord or Single Server Support
++ Full Configurable
++ Configurable MOTD
++ Configurable Countdowns
++ Deathmatch
++ Item Chests (Tier I and II)
++ Teleport to Fallback Servers
++ Spectators
+
 ## Commands
 
 | Command       | Description  |
