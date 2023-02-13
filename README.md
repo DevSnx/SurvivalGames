@@ -5,7 +5,7 @@
 + Vote Maps
 + Scoreboards
 
-## Deatures
+## Features
 + Multi Language System
 + MySQL Support
 + Bungeecord or Single Server Support
