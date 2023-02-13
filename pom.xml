@@ -71,7 +71,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.18-R0.1-SNAPSHOT</version>
+            <version>1.19-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -82,7 +82,7 @@
         <dependency>
             <groupId>de.snx.statsapi</groupId>
             <artifactId>statsapi</artifactId>
-            <version>1.3-SNAPSHOT</version>
+            <version>1.3.1-STABLE</version>
         </dependency>
     </dependencies>
 </project>
