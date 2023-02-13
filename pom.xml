@@ -6,7 +6,7 @@
 
     <groupId>de.devsnx.survivalgames</groupId>
     <artifactId>SurvivalGames</artifactId>
-    <version>0.0.6-ALPHA</version>
+    <version>0.0.7-ALPHA</version>
     <packaging>jar</packaging>
 
     <name>Survivalgames</name>
